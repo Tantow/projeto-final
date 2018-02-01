@@ -1,9 +1,9 @@
 <h1>Login</h1>
 <%= form_for :session, url: :login do |form| %>
-	  <%= form.label :email %>
+	  <%= form.label "Email" %>
 	  <%= form.email_field :email %>
 	  
-	  <%= form.label :senha %>
+	  <%= form.label "Senha" %>
 	  <%= form.password_field :password %>
 	  
 	  <%= form.submit "Entrar" %>

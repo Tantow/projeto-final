@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   before_action :user_not_logged, except: [:new, :create]
+  before_action :logged_user, only: [:new, :create]
+  before_action :right_user_or_admin, only: :destroy
   
 
   # GET /users
@@ -63,6 +65,21 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def right_user
+		if current_user != @user
+			flash[:alert] = "Oops! Não permitido."
+			redirect_to user_path(id: current_user.id)
+		end
+	
+
+	end
+
+
+
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
