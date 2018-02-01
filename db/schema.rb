@@ -20,5 +20,22 @@ ActiveRecord::Schema.define(version: 20180201130454) do
     t.string "password_digest"
     t.string "password_confirmation"
   end
+  
+  create_table "teams", force: :cascade do |t|
+    t.string "teamname"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_teams_on_user_id"
+  end
 
+  create_table "user_teams", force: :cascade do |t|
+    t.integer "User_id"
+    t.integer "Team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["Team_id"], name: "index_user_teams_on_Team_id"
+    t.index ["User_id"], name: "index_user_teams_on_User_id"
+  end
+  
 end
