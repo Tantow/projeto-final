@@ -1,7 +1,7 @@
 module SessionHelper
-	def log_in(user) 
-	  session[:user_id] = user.id 
-	  redirect_to user_path(id: user.id)
+  def log_in(user) 
+    session[:user_id] = user.id 
+    redirect_to user_path(id: user.id)
   end
 
   def current_user
@@ -13,8 +13,8 @@ module SessionHelper
   end
 
   def log_out
-    session delete(:user_id)
-    redirect_to login path
+    session.delete(:user_id)
+    redirect_to login_path
   end
 
   def logged_user
@@ -30,5 +30,41 @@ module SessionHelper
         redirect_to login_path
     end
   end
+
+  def right_user_or_admin
+    	if !current_user.admin && current_user != @user
+			flash[:alert] = "Não permitido"			
+			redirect_to user_path(id: current_user.id)
+		elsif current_user == @user && current_user.admin
+			flash[:alert] = "Não permitido."
+			redirect_to user_path(id: current_user.id)
+		end			
+	end
+
+  def correct_user
+    if current_user != @user
+				flash[:notice] = "Não permitido"
+				redirect_to feed_path
+			end
+	end
+
+  def not_admin
+    if current_user.admin != true
+    redirect_to feed_path
+    end
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
       
 end

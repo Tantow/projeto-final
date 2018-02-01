@@ -1,4 +1,6 @@
 class SessionController < ApplicationController
+  before_action :logged_user, only: :new
+
   def new
   end
   
@@ -17,7 +19,7 @@ class SessionController < ApplicationController
   end
 
   def destroy
-  log_out
+  	log_out
 
   end
 
