@@ -12,16 +12,39 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :teamname %>
+    <%= form.label "Nome do Time" %>
     <%= form.text_field :teamname, id: :team_teamname %>
+
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :team_user_id %>
-  </div>
+    <div class="field">
+      <%= form.label "Desenvolvedor 1" %>
+      <%= form.text_field :user_id, id: :team_user_id %>
+    </div>
+
+    <div class="field">
+      <%= form.label "Desenvolvedor 1" %>
+      <%= select("", "user_id", User.all.collect {||}) :user_id, id: :team_user_id %>
+    </div>
+
+
+
+    <div class="field">
+      <%= form.label "Desenvolvedor 2" %>
+      <%= form.text_field :user_id, id: :team_user_id %>
+    </div>
+
+    <div class="field">
+      <%= form.label "Desenvolvedor 3" %>
+      <%= form.text_field :user_id, id: :team_user_id %>
+    </div>
+
+    <div class="field">
+      <%= form.label "Desenvolvedor 4" %>
+      <%= form.text_field :user_id, id: :team_user_id %>
+    </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Salvar time" %>
   </div>
 <% end %>
