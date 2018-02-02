@@ -17,6 +17,18 @@ class TeamsController < ApplicationController
     @team = Team.new
   end
 
+  #funcao que edita o time, adc um novo dev.
+  # def  team_edit
+  #   @team = Team.find_by (id: params[:team_id])
+  #   current_user.likes.build(team_id: params[:team_id]).save
+  #
+  #   # respond_to do |format|
+  #   #   format.html { redirect_to feed_path }
+  #   #   format.js
+  # end
+
+  #end
+
   # GET /teams/1/edit
   def edit
   end
