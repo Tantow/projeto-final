@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-  before_action :set_team, only: [:show, :edit, :update, :destroy]
+  before_action :set_team, only: [:show, :edit, :update, :destroy, :rota]
 
   # GET /teams
   # GET /teams.json
@@ -10,6 +10,7 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.json
   def show
+      @t = UserTeam.where(team_id: params[:id])
   end
 
   # GET /teams/new
@@ -18,16 +19,32 @@ class TeamsController < ApplicationController
   end
 
   #funcao que edita o time, adc um novo dev.
-  # def  team_edit
-  #   @team = Team.find_by (id: params[:team_id])
-  #   current_user.likes.build(team_id: params[:team_id]).save
-  #
-  #   # respond_to do |format|
-  #   #   format.html { redirect_to feed_path }
-  #   #   format.js
-  # end
+  def  team_edit
+    @team = Team.find_by(id: params[:team_id])
+    current_user.likes.build(team_id: params[:team_id]).save
 
+    # respond_to do |format|
+    #   format.html { redirect_to feed_path }
+    #   format.js
+  end
   #end
+
+  # Funcao que vai redirecionar o user para o relacionamento
+  def rota
+    # team = Team.find(params[:id])
+    # user = User.find(params[:user_id])
+    x = UserTeam.new
+    x.user_id = params[:user_id]
+    x.team_id = params[:id]
+     if UserTeam.find_by(team_id: params[:id], user_id: params[:user_id])
+     else
+       x.save
+     end
+
+    redirect_to @team
+  end
+
+
 
   # GET /teams/1/edit
   def edit

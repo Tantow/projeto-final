@@ -1,7 +1,7 @@
 
-<%= form_for @team, url: {action: "team_edit"}, html: {class: "nifty_form"} do |f| %>
+<%= form_for(@team, url: add_user_to_team_path, method: :patch) do |f| %>
   <%= f.label "Desenvolvedor" %>
   <%= select("", "user_id", User.all.collect { |user| [ user.full_name, user.id ] },
      {include_blank: "Desenvolvedor"}) %>
-    <%= f.submit "team_edit" %>
+    <%= f.submit "Adicionar desenvolvedor" %>
 <% end %>

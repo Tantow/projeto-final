@@ -7,5 +7,10 @@
 
 <%= render 'formnewdev', team: @team %>
 
+<% @t.each do |t| %>
+  <%= t.user.full_name %>
+  <br>
+<% end %>
+
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
