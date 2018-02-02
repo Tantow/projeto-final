@@ -1,38 +1,35 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="register-body">
+  <section class="register-section">
+    <div class="title">
+      <div class="title-container">
+        <h1>INformativo</h1>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label "Nome completo" %>
-    <%= form.text_field :full_name, id: :user_full_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label "Email" %>
-    <%= form.text_field :email, id: :user_email %>
-  </div>
-
-  <div class="field">
-	  <%= form.label "Senha" %>
-	  <%= form.password_field :password, id: :usuario_password %>
-	</div>
-
-	<div class="field">
-	  <%= form.label "Confirmação de Senha" %>
-	  <%= form.password_field :password_confirmation, id: :usuario_password_confirmation %>
-	</div>
-
-
-  <div class="actions">
-    <%= form.submit "Cadastrar" %>
-  </div>
-<% end %>
+    <%= form_with(model: user, local: true, html:{class: "register-container"}) do |form| %>
+      
+      <% if user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      
+      <%= form.text_field :full_name, id: :user_full_name, :placeholder => "Nome completo", id: "name" %>
+      <%= form.text_field :email, id: :user_email, :placeholder => "E-mail", id:"email" %>
+  	  <%= form.password_field :password, id: :usuario_password, :placeholder => "Senha", id:"password" %>
+  	  <%= form.password_field :password_confirmation, id: :usuario_password_confirmation, :placeholder => "Confirmação de senha", id: "confirmation" %>
+      
+      <div class="register-actions">
+        <%= form.submit "Cadastrar", id: "register-btn" %>
+      </div>
+      
+    <% end %>
+    
+    <p><%= link_to "Já possui uma conta?", login_path %></p> 
+    
+  </section>
+</div>

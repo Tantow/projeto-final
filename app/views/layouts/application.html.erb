@@ -3,7 +3,7 @@
   <head>
     <title>INformativo</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     </head>
       <body>
         <% if logged_in? %>
@@ -11,22 +11,7 @@
 			  <%= link_to "Logout", logout_path, method: :delete %>
 		    </p>
 			<% end %>
-			<p>
-				 <%= link_to "Entre", login_path%> | <%= link_to "Cadastre-se", new_user_path %></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-	  
+			
       <%= yield %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
       </body>

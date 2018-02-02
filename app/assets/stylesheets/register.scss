@@ -1,0 +1,80 @@
+/* register */
+
+.register-body{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+	background: #001e3d;
+}
+
+.title{
+	width: 100%;
+}
+
+.title-container{
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+.title h1 {	
+	text-align: center;
+	color: #ededed;
+	font-family: 'Quesha';
+	font-size: 6.4em;
+	font-weight: normal;
+}
+
+.register-section{
+	width: 100%;
+
+	padding: 5% 0; /*centralizando verticalmente 2*/
+}
+
+.register-section p a{
+    text-decoration: none;
+	color: #ededed;
+}
+
+.register-container input{
+	background: #ededed;
+	font-family: 'Quicksand';
+	font-size: 1.4em;
+	display: block;
+	margin: 15px auto;
+	width: 284px;
+	padding: 15px;
+	border: 1px solid #7d7d7d;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+.register-container input:focus{
+	outline: none;
+	background: #edf3fa;
+}
+
+.register-actions{
+	margin: 15px 0;
+}
+
+.register-actions #register-btn{
+	background: #5D94CA;
+	color: #ededed;
+	margin-top: 20px;
+	border: 2px solid #5d94ca;
+	border-radius: 10px;
+	cursor: pointer;
+	font-family: 'Quicksand_Bold';
+	font-size: 1.8em;
+}
+
+.register-actions #register-btn:hover{
+	border: 2px solid #ededed;
+}
+
+.register-section p{
+	text-align: center;
+	font-family: 'Quicksand';
+	color: #ededed;
+}

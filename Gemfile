@@ -5,6 +5,14 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Gem de mascarasJquery
+gem 'jquery_mask_rails', '~> 0.1.0'
+# Gem para alertas bonitos
+gem 'sweetalert-rails'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
+
 # gem para validacao de email
 gem 'validates_email_format_of'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
