@@ -3,7 +3,7 @@
   <head>
     <title>INformativo</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     </head>
       <body>
         <% if logged_in? %>
@@ -12,19 +12,6 @@
 		    </p>
 			<% end %>
 			<p>
-				 
-
-
-
-
-
-
-
-
-
-
-
-
 
       <%= render "layouts/avisos" %>
       <%= yield %>

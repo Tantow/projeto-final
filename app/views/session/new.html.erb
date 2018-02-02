@@ -1,12 +1,32 @@
-<h1>Login</h1>
-<%= link_to "Entre", login_path%> | <%= link_to "Cadastre-se", new_user_path %></p>
-<%= form_for :session, url: :login do |form| %>
-	  <%= form.label "Email" %>
-	  <%= form.email_field :email %>
-	  
-	  <%= form.label "Senha" %>
-	  <%= form.password_field :password %>
-	  
-	  <%= form.submit "Entrar" %>
-	<% end %>
-
+	<div class="login-body">
+	
+		<section>
+			<div class="login-nav">
+				<div class="login-nav-container">
+					<div class="login-register-button style-button"><%= link_to "Cadastrar", new_user_path %></div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="login-section">
+	
+			<div class="title">
+				<div class="title-container">
+				<h1>INformativo</h1>
+				</div>
+			</div>
+			
+			<%= form_for :session, url: :login, html: {class: "login-container"} do |form| %>
+		
+			  <%= form.email_field :email, :placeholder => "E-mail", id: "email" %>
+			  
+			  <%= form.password_field :password, :placeholder => "Senha", id: "password"  %>
+			  <div class="login-actions">
+			  	<%= form.submit "Entrar", id: "login-btn" %>
+			  </div>
+			<% end %>
+			
+			<p>Esqueceu a senha?</p>				
+		</section>
+		
+	</div>

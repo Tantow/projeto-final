@@ -1,0 +1,149 @@
+/* fonts */
+
+
+@font-face{
+	font-family: Quesha;
+	src: url('fonts/Quesha.ttf');
+}
+
+
+@font-face{
+	font-family: Quicksand;
+	src: url('fonts/Quicksand_Book.otf');
+}
+
+@font-face{
+	font-family: Quicksand_Bold;
+	src: url('fonts/Quicksand_Bold.otf');
+}
+
+
+
+/* reset */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+/* login */
+
+.login-body{
+	position: absolute;
+    width: 100%;
+    min-height: 100%;
+	background: #001e3d;
+}
+
+.login-nav{
+	width: 100%;
+}
+
+.login-nav-container{
+	width: 960px;
+	margin: 0 auto;
+}
+
+.login-register-button a{
+	background: #002B57;
+	color: #ededed;
+	padding: 10px;
+	margin: 20px 0;
+	border: 1px solid #002b57;
+	border-radius: 10px;
+	cursor: pointer;
+	text-align: center;
+	float: right;
+	font-family: 'Quicksand';
+	font-size: 1.4em;
+	text-decoration: none;
+}
+
+.login-register-button a:hover{
+	background: #053260;
+	border: 1px solid #ededed;
+}
+
+.login-nav::after{
+	content:'';
+	display: table;
+	clear: both;
+}
+
+.login-section{
+	width: 100%;
+
+	padding: 5% 0; /*centralizando verticalmente 2*/
+}
+
+.title{
+	width: 100%;
+
+}
+
+.title-container{
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+.title h1 {	
+	text-align: center;
+	color: #ededed;
+	font-family: 'Quesha';
+	font-size: 6.4em;
+	font-weight: normal;
+}
+
+.login-container input{
+	background: #ededed;
+	font-family: 'Quicksand';
+	font-size: 1.4em;
+	display: block;
+	margin: 0 auto;
+	width: 284px;
+	padding: 15px;
+	border: 1px solid #7d7d7d;
+	box-sizing: border-box;
+}
+
+.login-container input:focus{
+	outline: none;
+	background: #edf3fa;
+}
+
+.login-container #email{
+	border-radius: 10px 10px 0 0;
+	border-bottom: none;
+}
+
+.login-container #password{
+	border-radius: 0 0 10px 10px;
+}
+
+.login-actions{
+	margin: 15px 0;
+}
+
+.login-container #login-btn{
+	background: #5D94CA;
+	color: #ededed;
+	margin-top: 20px;
+	border: 2px solid #5d94ca;
+	border-radius: 10px;
+	cursor: pointer;
+	font-family: 'Quicksand_Bold';
+	font-size: 1.8em;
+}
+
+.login-container #login-btn:hover{
+	border: 2px solid #ededed;
+}
+
+.login-section p{
+	text-align: center;
+	font-family: 'Quicksand';
+	color: #ededed;
+	cursor: pointer;
+}
