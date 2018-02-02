@@ -44,6 +44,13 @@ class TeamsController < ApplicationController
     redirect_to @team
   end
 
+  # def deletedev
+  #   @y = UserTeam
+  #   @y.destroy
+  #   respond_to do |format|
+  #   end
+  # end
+
 
 
   # GET /teams/1/edit
