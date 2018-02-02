@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :projects
   #root to: "users#index"
   
   get 'login', to: "session#new", as: :login
@@ -7,5 +8,7 @@ Rails.application.routes.draw do
   
   resources :users
   resources :teams
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  get 'reset_password/search', to: "reset_password#search", as: :reset_password
+	post 'reset_password/search', to: "reset_password#recovery"
 end

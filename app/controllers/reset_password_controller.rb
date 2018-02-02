@@ -7,14 +7,14 @@ class ResetPasswordController < ApplicationController
   def recovery
     user = User.find_by(email: params[:user][:email])
     if user
-      password = Passgen::generate (:lenght => 6)
+      password = Passgen::generate(:lenght => 6)
       user.password = password
 			user.password_confirmation = password 
 			user.save
 	    
 
 
-      UserMailer.forget_my_password(user, password)deliver.now
+      UserMailer.forget_my_password(user, password).deliver_now
       flash[:notice] = "Email com instruções de recuperação enviado"
        redirect_to login_path
     else
@@ -34,4 +34,4 @@ end
 
 
 
-end
+

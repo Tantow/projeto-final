@@ -9,4 +9,11 @@ class User < ApplicationRecord
 	message: "Por favor, insira um email nome.sobrenome@injunior.com.br"}
 	validates :password, length: { in: 6 .. 12 }, allow_nil: true
 
+	before_create :set_ativo_default
+
+	private
+		def set_ativo_default
+			self.ativo = true
+		end
+
 end

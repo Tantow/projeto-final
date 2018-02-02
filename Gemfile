@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#geracao automatica de senhas
+gem "passgen"
+
 # Gem de mascarasJquery
 gem 'jquery_mask_rails', '~> 0.1.0'
 # Gem para alertas bonitos
