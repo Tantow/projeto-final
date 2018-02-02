@@ -20,7 +20,7 @@ module SessionHelper
   def logged_user
     if logged_in?
       flash[:alert] = "Oops! Não permitido."
-        redirect_to current_user
+        redirect_to user_path(id: current_user.id)
     end
   end
 
@@ -44,7 +44,7 @@ module SessionHelper
   def correct_user
     if current_user != @user
 				flash[:notice] = "Não permitido"
-				redirect_to feed_path
+				redirect_to user_path
 			end
 	end
 

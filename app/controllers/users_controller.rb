@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   before_action :user_not_logged, except: [:new, :create]
   before_action :logged_user, only: [:new, :create]
   before_action :right_user_or_admin, only: :destroy
+  before_action :correct_user, only: [:destroy, :upadate]
+  
   
 
   # GET /users
@@ -33,7 +35,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'Usuário criado com sucesso!' }
+        log_in @user
+        format.html {}
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
