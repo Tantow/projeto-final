@@ -1,32 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="users-body">
+	<div class="users-container">
 
-<h1>Usuários</h1>
+		<div class="users-nav">
+			<div class="users-nav-container">
+				<p id="notice"><%= notice %></p>
+			</div>
+		</div>
+		<div class="users-title">
+			<div class="users-title-container">
+				<h1>Usuários</h1>
+			</div>
+		</div>
+	
+		<div class="users-table">
+				<table>
+ 			 		 <tbody class="users-list">
+			   		 <% @users.each do |user| %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome completo</th>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+   					  	 <tr class="users-list-container">
+   					   		  <td><%= link_to user.full_name, user %></td>
+   						 </tr>
+	
+   					 <% end %>
+ 					 </tbody>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.full_name %></td>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <% if current_user.admin || current_user == user %>            
-          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Tem certeza que deseja deletar?' } %></td>
-        <% end %>
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
+				</table>
+		</div>
+		
+	</div>
+</div>
