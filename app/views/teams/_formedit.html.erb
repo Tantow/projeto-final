@@ -3,8 +3,6 @@
     <div id="error_explanation">
       <h2><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</h2>
 
-      <%= render 'form', team: @team %>
-
       <ul>
       <% team.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -14,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.text_field :teamname, id: :team_teamname, placeholder: "Novo time" ,id: "new-team" %>
+    <%= form.text_field :teamname, id: :team_teamname, placeholder: "Novo time" %>
 
   </div>
 
   <div class="actions">
-    <%= form.submit "Criar", id: "new-team-btn" %>
+    <%= form.submit "Alterar" %>
   </div>
 <% end %>

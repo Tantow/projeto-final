@@ -1,16 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="teams-body">
+	<div class="teams-container">
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Teamname:</strong>
-  <%= @team.teamname %>
-</p>
+		<div class="team-title">
+			<div class="team-title-container">	
+				<p>
+ 				 <%= link_to @team.teamname, edit_team_path(@team) %>
+				</p>
+			</div>
+		</div>
 
-<%= render 'formnewdev', team: @team %>
+		<%= render 'formnewdev', team: @team %>
 
-<% @t.each do |t| %>
-  <%= t.user.full_name %>
-  <br>
-<% end %>
+		<div class="team-dev-container">
+			<% @t.each do |t| %>
+				<div class="team-dev">
+				  <%= t.user.full_name %>
+ 				  <br>
+				</div>
+			<% end %>
+		</div>
 
 
 

@@ -1,11 +1,29 @@
-<h1>Esqueci minha senha </h1>
+<div class="recovery-body">
+	<section>
+		<div class="recovery-nav">
+			<div class="recovery-nav-container">
+	    		<div class="recovery-login-button"><%= link_to "Entrar", login_path %></div> 
+			</div>
+		</div>
+	</section>
 
-<p>
-Digite seu email para recuperar:
+	<section class="recovery-section">
 
-</p>
-<%= form_for:user, url: :reset_password do |form| %>
-	<%= form.label "Email" %>
-	<%= form.email_field :email %>
-	<%= form.submit "Search" %>
-<% end %>
+		<div class="title">
+     			<div class="title-container">
+        			<h1>INformativo</h1>
+     			</div>
+    		</div>
+
+		<h2>Recupere sua conta</h2>
+
+		<%= form_for:user, url: :reset_password, html:{class: "recovery-container"} do |form| %>
+			<%= form.label "Email" %>
+			<%= form.email_field :email, :placeholder => "E-mail" ,id: "email" %>
+
+		<div class="recovery-actions">
+			<%= form.submit "Recuperar", id: "recovery-btn" %>
+		</div>
+		<% end %>
+	</section>
+</div>
