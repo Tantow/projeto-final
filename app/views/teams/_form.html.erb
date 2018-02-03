@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.text_field :teamname, id: :team_teamname, placeholder: "Novo time" %>
+    <%= form.text_field :teamname, id: :team_teamname, placeholder: "Novo time" ,id: "new-team" %>
 
   </div>
 
   <div class="actions">
-    <%= form.submit "Criar" %>
+    <%= form.submit "Criar", id: "new-team-btn" %>
   </div>
 <% end %>
