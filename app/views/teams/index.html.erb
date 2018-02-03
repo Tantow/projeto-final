@@ -1,15 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="teams-body">
+	<div class="teams-container">
 
-<%= render 'form', team: @team %>
-<table>
-  <tbody>
-    <% @teams.each do |team| %>
-      <tr>
-        <td><%= link_to team.teamname, team %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+		<p id="notice"><%= notice %></p>
+		
+		<div class="new-team-container">
+			<%= render 'form', team: @team %>
+		</div>
 
-<br>
+		<table>
+  			<tbody>
+  			  <% @teams.each do |team| %>
+			      <tr>
+       				 <td><%= link_to team.teamname, team %></td>
+    			  </tr>
+  			  <% end %>
+			</tbody>
+		</table>
 
+	</div>
+</div>
