@@ -125,7 +125,7 @@
 
 .team-title p{ 
         text-align: center;
-        color: #ededed;
+        color: #001e3d;
         font-family: 'Quesha';
         font-size: 6.4em;
         font-weight: normal;
@@ -203,6 +203,62 @@
 	padding: 10px;
 	border: 1px solid #7d7d7d;
 	height: 30px;
+
+}
+
+/* edit team */
+
+.new-name-container{
+	box-sizing: border-box;
+	margin: 20px auto;
+}
+
+.new-name-container::after{
+	content:'';
+	display: table;
+	clear: both;
+}
+
+#new-name {
+	background: #edf3fa;
+	color: #7d7d7d;
+	border: 1px solid #7d7d7d;
+	border-radius: 5px 0  0 5px;
+	font-family: "Quicksand";
+	font-size: 1.4em;
+	padding: 10px;	
+	box-sizing: border-box;
+	height: 50px;	
+	
+	width: 36%;
+	float: left;
+	position: absolute;
+}
+
+#new-name:focus{
+	outline: none;
+}
+
+#new-name-btn{
+	background: #29BD64;
+	color: #fafafa;
+	cursor: pointer;
+	border: 1px solid #7d7d7d;
+	border-radius: 0 5px 5px 0;
+	font-size: 1.4em;
+	font-weight: bold;
+	padding: 10px;	
+	transition: 0.3s; 
+
+	height: 50px;	
+	width: 100px;
+	float: right;
+	position: relative;
+}
+
+#new-name-btn:hover{
+	background: #2CCF6E;
+	transition: 0.3s; 
 
 }
 

@@ -1,22 +1,29 @@
-<%= form_with(model: team, local: true) do |form| %>
-  <% if team.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</h2>
+<div class="team-edit">
+	<div class="team-edit-container">
+		<%= form_with(model: team, local: true) do |form| %>
+ 		 <% if team.errors.any? %>
+   		 <div id="error_explanation">
+     		 <h2><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</h2>
 
-      <ul>
-      <% team.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+      		<ul>
+     		 <% team.errors.full_messages.each do |message| %>
+       		 <li><%= message %></li>
+     		 <% end %>
+     		 </ul>
+   		 </div>
+ 		 <% end %>
 
-  <div class="field">
-    <%= form.text_field :teamname, id: :team_teamname, placeholder: "Novo time" %>
+		<div class="new-name-container">	
+ 		 <div class="form">
+   		 <%= form.text_field :teamname, id: :team_teamname, placeholder: "Novo nome", id: "new-name" %>
 
-  </div>
+		  </div>
 
-  <div class="actions">
-    <%= form.submit "Alterar" %>
-  </div>
-<% end %>
+ 		 <div class="actions">
+   		 <%= form.submit "Alterar" , id: "new-name-btn"%>
+		  </div>
+		<% end %>
+		</div>
+
+	</div>
+</div>

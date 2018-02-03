@@ -1,11 +1,11 @@
 <div class="new-dev-container">
 
-<div class="new-dev">
-	<%= form_for(@team, url: add_user_to_team_path, method: :patch) do |f|  %>
- 	 <%= select("", "user_id", User.all.collect { |user| [ user.full_name, user.id ] },
-     		{include_blank: "Desenvolvedor"}) %>
-</div>
-    <%= f.submit "ADD", id: "new-dev-btn" %>
-<% end %>
+	<div class="new-dev">
+		<%= form_for(@team, url: add_user_to_team_path, method: :patch) do |f|  %>
+ 	 	<%= select("", "user_id", User.all.collect { |user| [ user.full_name, user.id ] },
+     			{include_blank: "Desenvolvedor"}) %>
+	</div>
+   	 <%= f.submit "ADD", id: "new-dev-btn" %>
+	<% end %>
 
 </div>
