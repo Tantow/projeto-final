@@ -16,10 +16,10 @@
       <tr>
         <td><%= user.full_name %></td>
         <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Ver', user %></td>
+        <td><%= link_to 'Editar', edit_user_path(user) %></td>
         <% if current_user.admin || current_user == user %>            
-          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Tem certeza que deseja deletar?' } %></td>
+          <td><%= link_to 'INativar', user, method: :delete, data: { confirm: 'Tem certeza que deseja deletar?' } %></td>
         <% end %>
 
       </tr>
@@ -28,5 +28,10 @@
 </table>
 
 <br>
+<%= link_to 'Novo Usuário', new_user_path %> |
+<%= link_to 'Todos os Usuários', users_path %> |
+
+<%= link_to 'Todos os Times', teams_path %> |
+<%= link_to 'Todos os Projetos', projects_path %>
 
 

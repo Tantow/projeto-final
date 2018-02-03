@@ -11,7 +11,34 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label "Nome" %>
+    <%= form.text_field :name, id: :project_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Prazo" %>
+    <%= form.datetime_select :deadline, id: :project_deadline %>
+  </div>
+
+  <div class="field">
+    <%= form.label "PMO" %>
+    <%= form.text_field :pmo, id: :project_pmo %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Gerente" %>
+    <%= form.text_field :manager, id: :project_manager %>
+  </div>
+  
+  <div>  
+    <%= form.label "Escolha o time" %>
+    <%= form.select(:team_id, @teams.collect { |team| [team.teamname, team.id] },
+       {include_blank: "Time"}) %>
+  </div>
+
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Criar projeto" %>
   </div>
 <% end %>
