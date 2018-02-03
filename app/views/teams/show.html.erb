@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Teamname:</strong>
-  <%= @team.teamname %>
+  <%= link_to @team.teamname, edit_team_path(@team) %>
 </p>
 
 <%= render 'formnewdev', team: @team %>
@@ -11,8 +10,3 @@
   <%= t.user.full_name %>
   <br>
 <% end %>
-
-
-
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
