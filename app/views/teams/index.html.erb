@@ -24,7 +24,21 @@
   </tbody>
 </table>
 
-<br>
+		<p id="notice"><%= notice %></p>
+		
+		<div class="new-team-container">
+			<%= render 'form', team: @team %>
+		</div>
+
+		<table>
+  			<tbody>
+  			  <% @teams.each do |team| %>
+			      <tr>
+       				 <td><%= link_to team.teamname, team %></td>
+    			  </tr>
+  			  <% end %>
+			</tbody>
+		</table>
 
 <%= link_to 'Novo time', new_team_path %> |
 <%= link_to 'Todos os Times', teams_path %> |
