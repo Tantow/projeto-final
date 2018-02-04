@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Nome</th>
+      <th>Descrição</th>
       <th>Prazo</th>
       <th>PMO</th>
       <th>Gerente</th>
@@ -17,6 +18,7 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.name %></td>
+        <td><%= project.description %></td>
         <td><%= project.deadline %></td>
         <td><%= project.pmo %></td>
         <td><%= project.manager %></td>

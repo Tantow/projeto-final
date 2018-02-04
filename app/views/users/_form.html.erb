@@ -26,11 +26,16 @@
       <%= form.radio_button :frontend, true, id: :user_front %>
       <%= form.label "Back-end" %>
       <%= form.radio_button :backend, false, id: :user_front %>
-    
-
-
       <%= form.file_field :avatar, id: :user_avatar %>
+      <% if current_user.admin == true %>
+        <%= form.label "Deseja INativar este user?" %>
+        <%= form.radio_button :ativo, false, id: :user_front %>
+        <%= form.label "Deseja tornar esse usuário PMO?" %>
+        <%= form.radio_button :pmo, false, id: :user_front %>
       
+      <% end %>
+
+
       <div class="register-actions">
         <%= form.submit "Cadastrar", id: "register-btn" %>
       </div>

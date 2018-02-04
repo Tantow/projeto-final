@@ -55,10 +55,18 @@ module SessionHelper
   end
 
 
+  def pmo
+    if current_user.pmo == true
+      flash[:alert] = "Não permitido"			
+      redirect_to users_path
+    end
+  end
 
-
-
-
+  def admin
+    if current_user.admin == true
+      permit
+    end
+  end  
 
 
 

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :user_not_logged, except: [:new, :create]
   before_action :logged_user, only: [:new, :create]
   before_action :right_user_or_admin, only: [:edit, :update, :destroy]
-  before_action :correct_user, only: [:destroy, :update]
+  before_action :correct_user, only: [:update]
   
   
 
