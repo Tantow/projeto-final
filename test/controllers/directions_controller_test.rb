@@ -1,48 +1,29 @@
 require 'test_helper'
 
 class DirectionsControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @direction = directions(:one)
-  end
-
-  test "should get index" do
-    get directions_url
+  test "should get presidencia" do
+    get directions_presidencia_url
     assert_response :success
   end
 
-  test "should get new" do
-    get new_direction_url
+  test "should get gp" do
+    get directions_gp_url
     assert_response :success
   end
 
-  test "should create direction" do
-    assert_difference('Direction.count') do
-      post directions_url, params: { direction: { name_d: @direction.name_d, office: @direction.office, pmo: @direction.pmo } }
-    end
-
-    assert_redirected_to direction_url(Direction.last)
-  end
-
-  test "should show direction" do
-    get direction_url(@direction)
+  test "should get financeiro" do
+    get directions_financeiro_url
     assert_response :success
   end
 
-  test "should get edit" do
-    get edit_direction_url(@direction)
+  test "should get projetos" do
+    get directions_projetos_url
     assert_response :success
   end
 
-  test "should update direction" do
-    patch direction_url(@direction), params: { direction: { name_d: @direction.name_d, office: @direction.office, pmo: @direction.pmo } }
-    assert_redirected_to direction_url(@direction)
+  test "should get marketing" do
+    get directions_marketing_url
+    assert_response :success
   end
 
-  test "should destroy direction" do
-    assert_difference('Direction.count', -1) do
-      delete direction_url(@direction)
-    end
-
-    assert_redirected_to directions_url
-  end
 end
