@@ -43,15 +43,18 @@
 	padding: 15px;
 }
 
-.show-btn, .edit-btn{
-	background: #ffd58d;
-	border-radius: 0px;
+#show-btn, #edit-btn, #destroy-btn{
+	padding: 10px;
+	border: 1px solid #7d7d7d;
+	border-radius: 5px;
 	font-weight: bold;
 }
 
-.destroy-btn{
+#show-btn, #edit-btn{
+	background: #ffd58d;
+}
+
+#destroy-btn{
 	background: #FF704D;
-	border-radius: 0px;
-	font-weight: bold;
 }
 

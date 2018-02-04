@@ -34,9 +34,11 @@
 						<td><%= project.deadline %></td>
 						<td><%= project.pmo %></td>
 						<td><%= project.manager %></td>
-						<td class="table-btn show-btn"><%= link_to 'Ver', project %></td>
-						<td class="table-btn edit-btn"><%= link_to 'Editar', edit_project_path(project) %></td>
-						<td class="table-btn destroy-btn"><%= link_to 'Excluir', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+						<td class="table-btn">
+							<%= link_to 'Ver', project, id: "show-btn" %>
+							<%= link_to 'Editar', edit_project_path(project) , id: "edit-btn" %>
+							<%= link_to 'Excluir', project, method: :delete, data: { confirm: 'Are you sure?' }, id: "destroy-btn"%>
+						</td>
 					</tr>
 					<% end %>
 				</tbody>
