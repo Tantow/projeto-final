@@ -1,17 +1,33 @@
-<h1>PERFIL</h1>
-<p id="notice"><%= notice %></p>
+<div class="users-body">
+	<div class="users-container">
 
+		<p id="notice"><%= notice %></p>
+	
+		<div class="users-title">
+			<div class="users-title-container">
+				<h1>Perfil</h1>
+			</div>
+		</div>
+	
+		<div class="profile-container">
+			<div class="profile-info">
+				<p>
+				  <strong>Nome completo:</strong>
+				  <%= @user.full_name %>
+				</p>
+	
+				<p>
+  					<strong>Email:</strong>
+ 					<%= @user.email %>
+				</p>
+			</div>
 
-<p>
-  <strong>Nome completo:</strong>
-  <%= @user.full_name %>
-</p>
+			<div class="profile-actions">
+				<%= link_to 'Editar', edit_user_path(@user) , id: "profile-btn"%> |
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+				<%= link_to 'Todos os Usuários', users_path , id: "profile-btn"%>
+			</div>
+		</div>
 
-<%= link_to 'Editar', edit_user_path(@user) %> |
-
-<%= link_to 'Todos os Usuários', users_path %>
+	</div>
+</div>
