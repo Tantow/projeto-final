@@ -1,4 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<p>
+  <strong>Nome:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Prazo:</strong>
+  <%= @project.deadline %>
+</p>
+
+<p>
+  <strong>PMO:</strong>
+  <%= @project.pmo %>
+</p>
+
+<p>
+  <strong>Gerente:</strong>
+  <%= @project.manager %>
+</p>
+  
+
+
+
+
+<%= link_to 'Editar', edit_project_path(@project) %> |
+<%= link_to 'Voltar', projects_path %>

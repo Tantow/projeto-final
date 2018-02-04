@@ -5,6 +5,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+#importacao de arquivos para o sistema
+gem 'carrierwave', '~> 1.0'
+
+#redimensionamento de imagens 
+gem "mini_magick"
+
 #geracao automatica de senhas
 gem "passgen"
 

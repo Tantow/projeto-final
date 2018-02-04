@@ -1,6 +1,35 @@
 <div class="teams-body">
 	<div class="teams-container">
 
+<h1>Times</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome do time</th>
+      
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= team.teamname %></td>
+        <td><%= link_to 'Ver', team %></td>
+        <td><%= link_to 'Editar', edit_team_path(team) %></td>
+        <td><%= link_to 'Arquivar time', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo time', new_team_path %> |
+<%= link_to 'Todos os Times', teams_path %> |
+<%= link_to 'Todos os Usuários', users_path %> |
+<%= link_to 'Todos os Projetos', projects_path %>
 		<p id="notice"><%= notice %></p>
 		
 		<div class="new-team-container">

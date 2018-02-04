@@ -10,15 +10,19 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @teams = Team.all
   end
 
   # GET /projects/new
   def new
     @project = Project.new
+    @teams = Team.all
   end
 
+  
   # GET /projects/1/edit
   def edit
+    @teams = Team.all
   end
 
   # POST /projects
@@ -51,6 +55,19 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def rota
+    x = Teamproject.new
+    x.team_id = params[:team_id]
+    x.project_id = params[:id]
+     if Teamproject.find_by(project_id: params[:id], team_id: params[:team_id])
+     else
+       x.save
+     end
+
+    redirect_to @project
+  end
+
+
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
@@ -69,6 +86,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.fetch(:project, {})
+      params.require(:project).permit(:name, :deadline, :pmo, :manager)
     end
 end

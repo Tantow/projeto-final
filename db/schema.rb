@@ -10,16 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202222518) do
+ActiveRecord::Schema.define(version: 20180203223224) do
 
   create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.datetime "deadline"
+    t.string "pmo"
+    t.string "manager"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "projectteams", force: :cascade do |t|
+  create_table "teamprojects", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_teamprojects_on_project_id"
+    t.index ["team_id"], name: "index_teamprojects_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -46,6 +54,7 @@ ActiveRecord::Schema.define(version: 20180202222518) do
     t.string "password_confirmation"
     t.boolean "admin"
     t.boolean "ativo"
+    t.string "avatar"
   end
 
 end
