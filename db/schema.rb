@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180203212731) do
+ActiveRecord::Schema.define(version: 20180204173002) do
 
   create_table "directions", force: :cascade do |t|
     t.string "name_d"
@@ -74,6 +74,8 @@ ActiveRecord::Schema.define(version: 20180203212731) do
     t.boolean "admin"
     t.boolean "ativo"
     t.string "avatar"
+    t.boolean "frontend"
+    t.boolean "backend"
   end
 
 end
