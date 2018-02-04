@@ -1,45 +1,46 @@
 <div class="body body-light">
-	<div class="body-light-container">
+	<div class="body-light-container projects-body-container">
 
 		<p id="notice"><%= notice %></p>
 
-	<div class="title title-dark">
-		<div class="title-container">
-			<h1>Projetos</h1>
+		<div class="title title-dark">
+			<div class="title-container">
+				<h1>Projetos</h1>
+			</div>
+		</div>
+
+	<div class="new-project">
+		<div class="new-project-container">
+			<%= link_to 'Novo Projeto', new_project_path, id:"new-project-btn" %>
 		</div>
 	</div>
 
-		<table>
-		<thead>
-		<tr>
-		<th>Nome</th>
-		<th>Prazo</th>
-		<th>PMO</th>
-		<th>Gerente</th>
-		<th colspan="3"></th>
-		</tr>
-		</thead>
+		<div class="projects-table">
+			<table>
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Prazo</th>
+						<th>PMO</th>
+						<th>Gerente</th>
+						<th colspan="3"></th>
+					</tr>
+				</thead>
 
-		<tbody>
-		<% @projects.each do |project| %>
-		<tr>
-		<td><%= project.name %></td>
-		<td><%= project.deadline %></td>
-		<td><%= project.pmo %></td>
-		<td><%= project.manager %></td>
-		<td><%= link_to 'Show', project %></td>
-		<td><%= link_to 'Edit', edit_project_path(project) %></td>
-		<td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-		</tr>
-		<% end %>
-		</tbody>
-		</table>
-
-		<br>
-
-		<%= link_to 'Novo Projeto', new_project_path %> |
-		<%= link_to 'Todos os Usuários', users_path %> |
-		<%= link_to 'Todos os Times', teams_path %> |
-
+				<tbody>
+					<% @projects.each do |project| %>
+					<tr>
+						<td><%= project.name %></td>
+						<td><%= project.deadline %></td>
+						<td><%= project.pmo %></td>
+						<td><%= project.manager %></td>
+						<td class="table-btn show-btn"><%= link_to 'Ver', project %></td>
+						<td class="table-btn edit-btn"><%= link_to 'Editar', edit_project_path(project) %></td>
+						<td class="table-btn destroy-btn"><%= link_to 'Excluir', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </div>

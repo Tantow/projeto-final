@@ -5,6 +5,11 @@
 	padding: 15px;
 }
 
+.users-table table td:hover{
+	background: #6c9fd1;
+        transition: 0.3s;
+}
+
 .users-table table td a{
 	color: #001e3d;
 }

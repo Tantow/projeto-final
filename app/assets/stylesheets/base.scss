@@ -1,5 +1,6 @@
 /* css base */
-/* padrao */
+
+/* body e title padrao */
 
 .body{
 	position: absolute;
@@ -67,17 +68,14 @@ table{
 
 table td{
         font-size: 1.4em; 
+	padding: 10px;
         border: 1px solid #7d7d7d;
-        transition: 0.3s;       
-}
-
-table td:hover{
-        background: #6c9fd1;
         transition: 0.3s;       
 }
 
 table td a{
         text-decoration: none;
+	color: #7d7d7d;
         cursor: pointer;
 }
 
@@ -85,4 +83,11 @@ table td a:hover{
         color: #fafafa !important;
 }
 
-
+.table-btn{
+	cursor: pointer;
+        border: 1px solid #7d7d7d;
+        border-radius: 5px;
+        font-size: 1em;
+        padding: 5px;
+        transition: 0.3s;
+}

@@ -19,9 +19,9 @@
 	  			  <% @teams.each do |team| %>
 				      <tr>
        				  	<td><%= link_to team.teamname, team %>
-					 		<div class="team-arquivar-btn">
+					 		<div class="table-btn teams-arquivar-btn">
 								<%= link_to 'Arquivar', team, method: :delete, data: { confirm: 'Are you sure?' } %>
-						</div>
+							</div>
 						</td>
    		 			  </tr>
   				  <% end %>
