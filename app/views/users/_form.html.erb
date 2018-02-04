@@ -22,13 +22,11 @@
       <%= form.text_field :email, id: :user_email, :placeholder => "E-mail", id:"email" %>
   	  <%= form.password_field :password, id: :usuario_password, :placeholder => "Senha", id:"password" %>
   	  <%= form.password_field :password_confirmation, id: :usuario_password_confirmation, :placeholder => "Confirmação de senha", id: "confirmation" %>
+      <%= form.file_field :avatar, id: :user_avatar %>
       
       <div class="register-actions">
         <%= form.submit "Cadastrar", id: "register-btn" %>
       </div>
-
-      <%= form.label :avatar %>
-      <%= form.file_field :avatar, id: :user_avatar %>
     <% end %>
     
     <p><%= link_to "Já possui uma conta?", login_path %></p> 

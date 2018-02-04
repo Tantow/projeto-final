@@ -3,19 +3,6 @@
 
 		<h1>Times</h1>
 
-<table>
-  <tbody>
-    <% @teams.each do |team| %>
-      <tr>
-        <td><%= team.teamname %></td>
-        <td><%= link_to 'Ver', team %></td>
-        <td><%= link_to 'Editar', edit_team_path(team) %></td>
-        <td><%= link_to 'Arquivar time', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
 		<p id="notice"><%= notice %></p>
 		
 		<div class="new-team-container">
@@ -26,7 +13,7 @@
   			<tbody>
   			  <% @teams.each do |team| %>
 			      <tr>
-       				 <td><%= link_to team.teamname, team %></td>
+       				 <td><%= link_to team.teamname, team %> <div class="team-arquivar-btn"><%= link_to 'Arquivar', team, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
     			  </tr>
   			  <% end %>
 			</tbody>
