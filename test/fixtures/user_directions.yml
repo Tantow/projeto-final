@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  users: one
+  teams: one
+  full_name: one
+
+two:
+  users: two
+  teams: two
+  full_name: two

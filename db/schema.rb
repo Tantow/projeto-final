@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202222518) do
+ActiveRecord::Schema.define(version: 20180203212731) do
+
+  create_table "directions", force: :cascade do |t|
+    t.string "name_d"
+    t.string "pmo"
+    t.string "office"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -26,6 +34,17 @@ ActiveRecord::Schema.define(version: 20180202222518) do
     t.string "teamname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "user_directions", force: :cascade do |t|
+    t.integer "users_id"
+    t.integer "teams_id"
+    t.integer "full_name_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["full_name_id"], name: "index_user_directions_on_full_name_id"
+    t.index ["teams_id"], name: "index_user_directions_on_teams_id"
+    t.index ["users_id"], name: "index_user_directions_on_users_id"
   end
 
   create_table "user_teams", force: :cascade do |t|

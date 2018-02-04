@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
+  resources :directions
   resources :projects
   #root to: "users#index"
-  
-  resources :users
-  resources :teams
-  
+
   get 'reset_password/search', to: "reset_password#search", as: :reset_password
 	post 'reset_password/search', to: "reset_password#recovery"
   #root to: "teams#index"
