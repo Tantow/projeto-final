@@ -90,15 +90,28 @@
 	transition: 0.3s;	
 }
 
-.teams-body table a{
+.teams-body table td a{
 	text-decoration: none;
 	color: #7d7d7d;
 }
 
-.teams-body table a:hover{
+.teams-body table td a:hover{
 	color: #fafafa;
 }
 
+.team-arquivar-btn{
+	background: #ffd58d;
+	color: #fafafa;
+	cursor: pointer;
+	border: 1px solid #7d7d7d;
+	border-radius: 5px;
+	font-size: 1em;
+	padding: 5px;	
+	transition: 0.3s; 
+
+	float: right;
+	position: relative;
+}
 
 /*
 .teams-body table > :first-child tr{
@@ -261,5 +274,4 @@
 	transition: 0.3s; 
 
 }
-
 
