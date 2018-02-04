@@ -18,7 +18,6 @@
 		<h2>Recupere sua conta</h2>
 
 		<%= form_for:user, url: :reset_password, html:{class: "recovery-container"} do |form| %>
-			<%= form.label "Email" %>
 			<%= form.email_field :email, :placeholder => "E-mail" ,id: "email" %>
 
 		<div class="recovery-actions">

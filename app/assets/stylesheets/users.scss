@@ -68,13 +68,25 @@
 	transition: 0.3s;
 }
 
-/* user profile */
+/* user profile (show) */
 
 .profile-container{
 	background: #ededed;
 	font-family: 'Quicksand';
 	padding: 10px;
 	border-radius: 5px;
+}
+
+.profile-img{
+	width: 100%;
+}
+
+.profile-img img{
+	max-width: 180px;
+	display: block;
+	margin: 20px auto;
+	border: 2px solid #5d94ca;
+	border-radius: 50%;
 }
 
 .profile-info p{

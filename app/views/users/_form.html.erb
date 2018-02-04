@@ -29,12 +29,11 @@
     
 
 
+      <%= form.file_field :avatar, id: :user_avatar %>
+      
       <div class="register-actions">
         <%= form.submit "Cadastrar", id: "register-btn" %>
       </div>
-
-      <%= form.label :avatar %>
-      <%= form.file_field :avatar, id: :user_avatar %>
     <% end %>
     
     <p><%= link_to "Já possui uma conta?", login_path %></p> 
