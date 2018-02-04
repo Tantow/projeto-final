@@ -1,0 +1,71 @@
+/* css base */
+/* padrao */
+
+
+/* paginas com body dark e title light */
+
+.body-dark{
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        background: #001e3d;
+}
+
+.title-light{
+        width: 100%;
+
+}
+
+.title-light-container{
+        width: 960px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+}
+
+.title-light h1 {
+        text-align: center;
+        color: #ededed;
+        font-family: 'Quesha';
+        font-size: 6.4em;
+        font-weight: normal;
+}
+
+/* paginas com body light e title dark */
+
+.body-light{
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        padding: 2.5% 0;
+        background: #fafafa;
+}
+
+.body-light-container{
+        width: 40%;
+        padding: 5% 0;
+        margin: 0 auto;
+}
+
+.title-dark{
+        width: 100%;
+}
+
+.title-dark-container{
+        max-width: 960px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+}
+
+.title-dark h1{
+        text-align: center;
+        color: #001e3d;
+        font-family: 'Quesha';
+        font-size: 6em;
+        font-weight: normal;
+}
+
+.title-dark h1 a{
+        text-decoration: none;
+        color: #001e3d;
+}
+

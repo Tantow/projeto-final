@@ -1,19 +1,5 @@
 /* team feed */
 
-.teams-body{
-	background: #fafafa;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	padding: 2.5% 0;
-}
-
-.teams-container{
-	width: 40%;
-	margin: 0 auto;
-	padding: 5% 0;
-}
-
 .new-team-container{
 	box-sizing: border-box;
 	margin: 20px auto;
@@ -68,13 +54,13 @@
 	clear: both;
 }
 
-.teams-body table{
+.teams-table{
 	border: 1px solid #7d7d7d;
 	border-collapse: collapse;
 	width: 100%;
 }
 
-.teams-body table td{
+.teams-table td{
 	background: #edf3fa;
 	font-family: "Quicksand";
 	font-size: 1.4em;
@@ -84,18 +70,18 @@
 	transition: 0.3s;	
 }
 
-.teams-body table td:hover{
+.teams-table td:hover{
 	background: #6c9fd1;
 	color: #fafafa;
 	transition: 0.3s;	
 }
 
-.teams-body table td a{
+.teams-table td a{
 	text-decoration: none;
 	color: #7d7d7d;
 }
 
-.teams-body table td a:hover{
+.teams-table td a:hover{
 	color: #fafafa;
 }
 
@@ -124,30 +110,6 @@
 */
 
 /* show team */
-
-.team-title{
-        width: 100%;
-
-}
-
-.team-title-container{
-        max-width: 960px;
-        margin: 0 auto;
-        margin-bottom: 30px;
-}
-
-.team-title p{ 
-        text-align: center;
-        color: #001e3d;
-        font-family: 'Quesha';
-        font-size: 6.4em;
-        font-weight: normal;
-}
-
-.team-title a{
-	text-decoration: none;
-        color: #001e3d;
-}
 
 .new-dev-container{
 	box-sizing: border-box;
