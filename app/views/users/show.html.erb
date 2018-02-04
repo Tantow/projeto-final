@@ -1,7 +1,12 @@
 <h1>PERFIL</h1>
 <p id="notice"><%= notice %></p>
 
+<p>
+<% if !@user.avatar.file.nil? %>
+	<%= image_tag @user.avatar.thumb.url %>
+<% end %>
 
+</p>
 <p>
   <strong>Nome completo:</strong>
   <%= @user.full_name %>
@@ -11,6 +16,8 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+
+
 
 <%= link_to 'Editar', edit_user_path(@user) %> |
 
