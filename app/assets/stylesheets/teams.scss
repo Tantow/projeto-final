@@ -54,35 +54,15 @@
 	clear: both;
 }
 
-.teams-table{
-	border: 1px solid #7d7d7d;
-	border-collapse: collapse;
-	width: 100%;
+/* teams table */
+/* outros styles de table em base.scss */
+
+.teams-table table td{
+        padding: 10px;
 }
 
-.teams-table td{
-	background: #edf3fa;
-	font-family: "Quicksand";
-	font-size: 1.4em;
-	padding: 10px;
-	border: 1px solid #7d7d7d;
-	height: 30px;
-	transition: 0.3s;	
-}
-
-.teams-table td:hover{
-	background: #6c9fd1;
-	color: #fafafa;
-	transition: 0.3s;	
-}
-
-.teams-table td a{
-	text-decoration: none;
-	color: #7d7d7d;
-}
-
-.teams-table td a:hover{
-	color: #fafafa;
+.teams-table table td a{
+        color: #7d7d7d;
 }
 
 .team-arquivar-btn{
@@ -98,16 +78,6 @@
 	float: right;
 	position: relative;
 }
-
-/*
-.teams-body table > :first-child tr{
-	border-radius: 5px 5px 0 0;
-}
-
-.teams-body table > :last-child tr{
-	border-radius: 0 0 5px 5px;
-}
-*/
 
 /* show team */
 

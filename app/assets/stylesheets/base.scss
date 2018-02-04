@@ -55,3 +55,34 @@
         color: #001e3d;
 }
 
+/* tables */
+
+table{
+        background: #edf3fa;
+        width: 100%;
+        font-family: "Quicksand";
+        border: 1px solid #7d7d7d;
+        border-collapse: collapse;
+}
+
+table td{
+        font-size: 1.4em; 
+        border: 1px solid #7d7d7d;
+        transition: 0.3s;       
+}
+
+table td:hover{
+        background: #6c9fd1;
+        transition: 0.3s;       
+}
+
+table td a{
+        text-decoration: none;
+        cursor: pointer;
+}
+
+table td a:hover{
+        color: #fafafa !important;
+}
+
+

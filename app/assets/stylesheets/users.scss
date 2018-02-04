@@ -1,36 +1,12 @@
 /* users feed */
+/* outros styles de table em base.scss */
 
-.users-table table{
-	width: 100%;
-	height: 30px;
-	background: #edf3fa;
-	color: #001e3d;
-	font-family: 'Quicksand';
-	padding: 10px;
-	border: 1px solid #7d7d7d;
-	border-collapse: collapse;
-}
-
-.users-list td{
-	font-size: 1.4em;
+.users-table table td{
 	padding: 15px;
-	border: 1px solid #7d7d7d;
-	transition: 0.3s;
 }
 
-.users-list td:hover{
-	background: #6c9fd1;
-	transition: 0.3s;
-}
-
-.users-list td a{
-	text-decoration: none;
+.users-table table td a{
 	color: #001e3d;
-	cursor: pointer;
-}
-
-.users-list td a:hover{
-	color: #fafafa;
 }
 
 /* user profile (show) */
