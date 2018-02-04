@@ -1,34 +1,38 @@
 <div class="body body-light">
 	<div class="body-light-container">
 
-<p id="notice"><%= notice %></p>
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @project.name %>
-</p>
+		<div class="title title-dark">
+			<div class="title-container">
+				<h1>
+					<%= @project.name %>
+				</h1>
+			</div>
+		</div>
 
-<p>
-  <strong>Prazo:</strong>
-  <%= @project.deadline %>
-</p>
+		<div class="projects info">
+			<p>
+			  <strong>Prazo:</strong>
+			  <%= @project.deadline %>
+			</p>
 
-<p>
-  <strong>PMO:</strong>
-  <%= @project.pmo %>
-</p>
+			<p>
+			  <strong>PMO:</strong>
+			  <%= @project.pmo %>
+			</p>
 
-<p>
-  <strong>Gerente:</strong>
-  <%= @project.manager %>
-</p>
+			<p>
+			  <strong>Gerente:</strong>
+			  <%= @project.manager %>
+			</p>
   
-
-
-
-
-<%= link_to 'Editar', edit_project_path(@project) %> |
-<%= link_to 'Voltar', projects_path %>
+			<div class="info-actions">
+				<%= link_to 'Editar', edit_project_path(@project), id:"info-btn" %>
+				<%= link_to 'Voltar', projects_path, id:"info-btn" %>
+			</div>
+	
+		</div>
 
 	</div>
 </div>

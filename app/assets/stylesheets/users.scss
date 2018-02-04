@@ -15,13 +15,7 @@
 }
 
 /* user profile (show) */
-
-.profile-container{
-	background: #ededed;
-	font-family: 'Quicksand';
-	padding: 10px;
-	border-radius: 5px;
-}
+/* outros styles de show em base.scss */
 
 .profile-img{
 	width: 100%;
@@ -33,37 +27,5 @@
 	margin: 20px auto;
 	border: 2px solid #5d94ca;
 	border-radius: 50%;
-}
-
-.profile-info p{
-	font-size: 1.2em;
-	padding: 10px;
-}
-
-.profile-actions{
-	margin: 20px 10px;
-	text-align: right;
-}
-
-.profile-actions a{
-	text-decoration: none;
-}
-
-#profile-btn{
-	background: #5D94CA;
-	color: #fafafa;
-	padding: 10px;
-	border: 2px solid #5d94ca;
-	border-radius: 10px;
-	cursor: pointer;
-	font-family: 'Quicksand_Bold';
-	font-size: 1.2em;
-	transition: 0.3s;
-}
-
-#profile-btn:hover{
-	border: 2px solid #001e3d;
-	color: #001e3d;
-	transition: 0.3s;
 }
 

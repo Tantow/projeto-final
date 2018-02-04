@@ -91,3 +91,46 @@ table td a:hover{
         padding: 5px;
         transition: 0.3s;
 }
+
+/* info */
+/* paginas de show de user e project */
+
+.info{
+        background: #ededed;
+        font-family: 'Quicksand';
+        padding: 10px;
+        border-radius: 5px;
+}
+
+.info p{
+        font-size: 1.2em;
+        padding: 10px;
+}
+
+.info-actions{
+        margin: 20px 10px;
+        text-align: right;
+}
+
+.info-actions a{
+        text-decoration: none;
+}
+
+#info-btn{
+        background: #5D94CA;
+        color: #fafafa;
+        padding: 10px;
+        border: 2px solid #5d94ca;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: 'Quicksand_Bold';
+        font-size: 1.2em;
+        transition: 0.3s;
+}
+
+#info-btn:hover{
+        border: 2px solid #001e3d;
+        color: #001e3d;
+        transition: 0.3s;
+}
+ 
