@@ -41,13 +41,6 @@
 	padding: 10px;
 	border: 1px solid #7d7d7d;
 	border-collapse: collapse;
-	border-radius: 5px;
-}
-
-.users-table th{
-	font-size: 1.2em;
-	border: 1px solid #7d7d7d;
-	height: 60px;
 }
 
 .users-list td{
@@ -57,15 +50,19 @@
 	transition: 0.3s;
 }
 
+.users-list td:hover{
+	background: #6c9fd1;
+	transition: 0.3s;
+}
+
 .users-list td a{
 	text-decoration: none;
 	color: #001e3d;
 	cursor: pointer;
 }
 
-.users-list td:hover{
-	background: #6c9fd1;
-	transition: 0.3s;
+.users-list td a:hover{
+	color: #fafafa;
 }
 
 /* user profile (show) */
