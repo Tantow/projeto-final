@@ -48,9 +48,11 @@
 	border: 1px solid #7d7d7d;
 	border-radius: 5px;
 	font-weight: bold;
+	display: block;
 }
 
 #show-btn, #edit-btn{
+	margin-bottom: 5px;
 	background: #ffd58d;
 }
 
