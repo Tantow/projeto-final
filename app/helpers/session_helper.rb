@@ -35,9 +35,7 @@ module SessionHelper
     	if !current_user.admin && current_user != @user
 			flash[:alert] = "Não permitido"			
 			redirect_to user_path(id: current_user.id)
-		elsif current_user == @user && current_user.admin
-			flash[:alert] = "Não permitido."
-			redirect_to user_path(id: current_user.id)
+		
 		end			
 	end
 
