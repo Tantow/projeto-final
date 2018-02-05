@@ -11,7 +11,7 @@
 	color: #ededed;
 }
 
-.register-container input{
+.register-container input, label{
 	background: #ededed;
 	font-family: 'Quicksand';
 	font-size: 1.4em;
@@ -27,6 +27,48 @@
 .register-container input:focus{
 	outline: none;
 	background: #edf3fa;
+}
+
+/* table de front e back */
+.esp-table{
+	background: #ededed;
+	text-align: center;
+	margin: 15px auto;
+	border-radius: 10px;
+	width: 284px;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 10px;
+}
+
+.esp-table td{
+	border: none;
+}
+
+.esp-table input{
+	width: 20px;
+}
+
+/* escolha sua foto */
+.register-container label{
+	cursor: pointer;
+}
+
+.register-container label i{
+	color: #053260;
+	padding: 0 10px;
+}
+
+.register-container label:hover{
+	color: #5d94ca;
+
+	i{
+		color: #5d94ca;
+	}
+}
+
+#user_avatar{
+	display: none;
 }
 
 .register-actions{

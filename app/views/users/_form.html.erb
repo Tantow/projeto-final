@@ -20,17 +20,30 @@
       
       <%= form.text_field :full_name, id: :user_full_name, :placeholder => "Nome completo", id: "name" %>
       <%= form.text_field :email, id: :user_email, :placeholder => "E-mail", id:"email" %>
-      <%= form.label "Front-end" %>
-      <%= form.radio_button :frontend, true, id: :user_front %>
-      <%= form.label "Back-end" %>
-      <%= form.radio_button :frontend, false, id: :user_front %>
-      <%= form.file_field :avatar, id: :user_avatar %>
-      
+ 
+			<div class="esp">
+			<table class="esp-table">
+				<tr>
+					<td>Front</td>
+					<td>Back</td>
+				</tr>
+				<tr>
+					<td> 
+ 	     		<%= form.radio_button :frontend, true, checked:"checked", id: :user_front %>
+					</td>
+					<td> 
+ 	     		<%= form.radio_button :frontend, false, id: :user_front %>
+					</td>
+				</tr>
+				</table>
+       </div> 
+	   
+			<label for="user_avatar"><i class="fa fa-upload"></i> Escolha sua foto</label> 
+			<%= form.file_field :avatar, id: :user_avatar %>
 
     	<%= form.password_field :password, id: :usuario_password, :placeholder => "Senha", id:"password" %>
     	<%= form.password_field :password_confirmation, id: :usuario_password_confirmation,
 		 :placeholder => "Confirmação de senha", id: "confirmation" %>
-      <%= form.file_field :avatar, id: :user_avatar, id:"avatar" %>
 
       
 	    <div class="register-actions">

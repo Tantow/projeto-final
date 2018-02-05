@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #Rotas para as páginas da presidências
   
-  #resources :directions
+  resources :directions
   get 'directions/presidencia', to: "directions#presidencia", as: :presidencia
   get 'directions/gp', to: "directions#gp", as: :gp
   get 'directions/financeiro', to: "directions#financeiro", as: :financeiro
