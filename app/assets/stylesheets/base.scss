@@ -93,6 +93,7 @@ table td a:hover{
 }
 
 /* info */
+
 /* paginas de show de user e project */
 
 .info{
@@ -136,8 +137,10 @@ table td a:hover{
         transition: 0.3s;
 }
 
+/* botoes */
 
 /* botoes do tipo create */
+/* 'criar projeto' */
 
 #create-btn{
         background: #29bd64;
@@ -159,4 +162,35 @@ table td a:hover{
         border: 3px solid #18703B;
         color: #18703B;
 }
+
+/* botoes do tipo new*/
+/* 'novo projeto', 'nova diretoria' */
+
+#new-btn{
+        background: #29bd64;
+        color: #fafafa;
+        margin: 15px 0;
+        padding: 10px;
+        text-decoration: none;
+        font-family: "Quicksand";
+        font-size: 1.4em;
+        font-weight: bold;
+        cursor: pointer;
+        border: 1px solid #7d7d7d;
+        border-radius: 5px;
+        float: right;
+        transition: 0.3s;
+}
+
+#new-btn:hover{
+        background: #2ccf6e;
+        transition: 0.3s;
+}
+
+#new-btn::after{
+        content:'';
+        display: table;
+        clear: both;
+}
+
 

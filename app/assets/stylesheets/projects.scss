@@ -4,33 +4,6 @@
 	width: 60%;
 }
 
-#new-project-btn{
-	background: #29bd64;
-	color: #fafafa;
-	margin: 15px 0;
-	padding: 10px;
-	text-decoration: none;
-	font-family: "Quicksand";
-	font-size: 1.4em;
-	font-weight: bold;
-	cursor: pointer;
-	border: 1px solid #7d7d7d;
-	border-radius: 5px;
-	float: right;
-	transition: 0.3s;
-}
-
-#new-project-btn:hover{
-	background: #2ccf6e;
-	transition: 0.3s;
-}
-
-#new-project-btn::after{
-	content:'';
-	display: table;
-	clear: both;
-}
-
 .projects-table table{
 	margin: 20px auto;
 }
