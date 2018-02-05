@@ -25,7 +25,7 @@
       <%= form.label "Front-end" %>
       <%= form.radio_button :frontend, true, id: :user_front %>
       <%= form.label "Back-end" %>
-      <%= form.radio_button :backend, false, id: :user_front %>
+      <%= form.radio_button :frontend, false, id: :user_front %>
       <%= form.file_field :avatar, id: :user_avatar %>
       <% if current_user.admin == true %>
         <%= form.label "Deseja INativar este user?" %>

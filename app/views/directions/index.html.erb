@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Name d</th>
-      <th>Pmo</th>
-      <th>Office</th>
+      <th>Nome da diretoria</th>
+      <th>PMO</th>
+      <th>Cargo</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,10 @@
         <td><%= direction.name_d %></td>
         <td><%= direction.pmo %></td>
         <td><%= direction.office %></td>
-        <td><%= link_to 'Show', direction %></td>
-        <td><%= link_to 'Edit', edit_direction_path(direction) %></td>
-        <td><%= link_to 'Destroy', direction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', direction %></td>
+        <td><%= link_to 'Mostrar', edit_direction_path(direction) %></td>
+        <td><%= link_to 'Deletar', 
+        direction, method: :delete, data: { confirm: 'Tem certeza que deseja excluir essa diretoria?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Direction', new_direction_path %>
+<%= link_to 'Nova Direção', new_direction_path %>

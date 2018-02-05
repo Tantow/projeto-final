@@ -23,7 +23,22 @@
   					<strong>Email:</strong>
  					<%= @user.email %>
 				</p>
-			</div>
+				<p>
+
+				<strong>Especialidade:</strong>
+				<% if current_user.frontend == true %>
+					<%= 'Front-end' %>
+				<% else %>
+					<%= 'Back-end' %>
+				<% end %>
+				</p>
+
+	
+
+
+
+
+				</div>
 
 			<div class="profile-actions">
 				<%= link_to 'Editar', edit_user_path(@user) , id: "profile-btn"%>
