@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy, :rota]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+
 
   before_action :user_not_logged, except: [:new, :create]
   before_action :logged_user, only: [:new, :create]
@@ -58,7 +58,14 @@ class TeamsController < ApplicationController
   #   end
   # end
 
+  def routes66
+    y = UserTeam.find_by(user_id: params[:tiago], team_id: params[:id])
+    y.destroy
 
+    @team = Team.find_by(id: params[:renato])
+
+    redirect_to @team
+  end
 
   # GET /teams/1/edit
   def edit
