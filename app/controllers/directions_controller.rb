@@ -1,6 +1,6 @@
 class DirectionsController < ApplicationController
   before_action :set_direction, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  
 
   before_action :user_not_logged, except: [:new, :create]
   before_action :logged_user, only: [:new, :create]
@@ -46,4 +46,11 @@ class DirectionsController < ApplicationController
        x.save
      end
    end
+
+
+
+  private
+  def set_direction
+    @direction = Direction.find(params[:id])
+  end
 end

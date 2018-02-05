@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180205142440) do
+ActiveRecord::Schema.define(version: 20180205190041) do
 
   create_table "directions", force: :cascade do |t|
     t.string "name_d"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180205142440) do
     t.datetime "updated_at", null: false
     t.string "description"
     t.integer "team_id"
+    t.string "trello"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 20180205142440) do
     t.boolean "done"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "confirmation"
   end
 
   create_table "teamprojects", force: :cascade do |t|

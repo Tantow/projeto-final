@@ -46,6 +46,11 @@
        {include_blank: "Time"}) %>
   </div>
 
+  <div class="field">
+    <%= form.label "Trello" %>
+    <%= form.text_field :trello, id: :project_trello %>
+  </div>
+
 
   <div class="actions">
     <%= form.submit "Alterar" %>

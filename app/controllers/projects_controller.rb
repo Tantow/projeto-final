@@ -1,11 +1,8 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  
 
-  before_action :user_not_logged, except: [:new, :create]
-  before_action :logged_user, only: [:new, :create]
-  before_action :right_user_or_admin, only: [:edit, :update, :destroy]
-  before_action :correct_user, only: [:update]
+  
 
   # GET /projects
   # GET /projects.json
@@ -86,12 +83,16 @@ class ProjectsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    
+
+
     def set_project
       @project = Project.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :deadline, :pmo, :manager, :description, :team_id)
+      params.require(:project).permit(:name, :deadline, :pmo, :manager, :description,
+       :team_id, :trello)
     end
 end
