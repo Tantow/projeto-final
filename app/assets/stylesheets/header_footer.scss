@@ -122,9 +122,7 @@ header{
 footer{
 	background: #001e3d;
 	width: 100%;
-	position: absolute;
-	left: 0;
-	bottom: 0;
+	height: 60px;
 }
 
 .footer-container{
@@ -137,5 +135,20 @@ footer{
 	text-align: center;
 	font-family: "Quicksand";
 	font-size: 1.4em;
-	padding: 10px 0;
+	padding-top: 12px;
+}
+
+.footer-container a:hover{
+	cursor: default;
+}
+
+.footer-container a{
+	text-decoration: none;
+	color: #fafafa;
+}
+
+/* casulo */
+
+.casulo{
+	min-height: calc(100vh - 60px);
 }
