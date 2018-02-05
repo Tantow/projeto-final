@@ -119,10 +119,12 @@ table td a:hover{
 #info-btn{
         background: #5D94CA;
         color: #fafafa;
+	margin: 0 5px;
         padding: 10px;
         border: 2px solid #5d94ca;
         border-radius: 10px;
         cursor: pointer;
+	text-decoration: none;
         font-family: 'Quicksand_Bold';
         font-size: 1.2em;
         transition: 0.3s;
@@ -133,4 +135,28 @@ table td a:hover{
         color: #001e3d;
         transition: 0.3s;
 }
- 
+
+
+/* botoes do tipo create */
+
+#create-btn{
+        background: #29bd64;
+        color: #fafafa;
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+        margin: 0 auto;
+        font-family: "Quicksand";
+        font-size: 1.5em;
+        font-weight: bold;
+        border: 3px solid #29bd64;
+        border-radius: 10px;
+        transition: 0.3s;
+}
+
+#create-btn:hover{
+        background: #2ccf6e;
+        border: 3px solid #18703B;
+        color: #18703B;
+}
+

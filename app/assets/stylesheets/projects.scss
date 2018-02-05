@@ -108,24 +108,5 @@
 	padding: 25px;
 }
 
-.form-actions input{
-	background: #29bd64;
-	color: #fafafa;
-	cursor: pointer;
-	display: block;
-	padding: 10px;
-	margin: 0 auto;
-	font-family: "Quicksand";
-	font-size: 1.5em;
-	font-weight: bold;
-	border: 3px solid #29bd64;
-	border-radius: 10px;
-	transition: 0.3s;
-}
-
-.form-actions input:hover{
-	background: #2ccf6e;
-	border: 3px solid #18703B;
-	color: #18703B;
-}
+/* style do botao 'criar projeto' em base.scss */
 
