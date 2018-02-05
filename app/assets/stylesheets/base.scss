@@ -91,6 +91,23 @@ table td a:hover{
         transition: 0.3s;
 }
 
+/* single table, apenas uma coluna */
+/* tabelas do feed de usuarios e diretorias */
+
+.single-table table td{
+        padding: 15px;
+}
+
+.single-table table td:hover{
+        background: #6c9fd1;
+        transition: 0.3s;
+}
+
+.single-table table td a{
+        color: #001e3d;
+}
+
+
 /* info */
 
 /* paginas de show de user e project */

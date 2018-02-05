@@ -1,18 +1,4 @@
-/* users feed */
-/* outros styles de table em base.scss */
-
-.users-table table td{
-	padding: 15px;
-}
-
-.users-table table td:hover{
-	background: #6c9fd1;
-        transition: 0.3s;
-}
-
-.users-table table td a{
-	color: #001e3d;
-}
+/* styles de table em base.scss */
 
 /* user profile (show) */
 /* outros styles de show em base.scss */
@@ -28,4 +14,5 @@
 	border: 2px solid #5d94ca;
 	border-radius: 50%;
 }
+
 
