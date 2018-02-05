@@ -2,10 +2,10 @@
 
 /* body e title padrao */
 
-.body{
-	position: absolute;
+body{
 	width: 100%;
 	min-height: 100%;
+	background: #001e3d;
 }
 
 .title{
@@ -35,13 +35,13 @@
 /* paginas com body light e title dark */
 
 .body-light{
-        padding: 2.5% 0;
+        padding: 5% 0;
         background: #fafafa;
 }
 
 .body-light-container{
         width: 40%;
-        padding: 5% 0;
+        padding: 10% 0;
         margin: 0 auto;
 }
 
