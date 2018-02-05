@@ -42,8 +42,9 @@ Rails.application.routes.draw do
    put '/teams/:id', to: 'teams#update'
    delete '/teams/:id', to: 'teams#destroy'
 
-  patch '/linkteamproject/:id', to: 'projects#rota', as: :add_team_to_project
-  patch '/linkuserteam/:id', to: 'teams#rota', as: :add_user_to_team
+    delete '/linkuserteam:id', to: 'teams#route66'
+    patch '/linkteamproject/:id', to: 'projects#rota', as: :add_team_to_project
+    patch '/linkuserteam/:id', to: 'teams#rota', as: :add_user_to_team
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 

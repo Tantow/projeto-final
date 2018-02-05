@@ -3,7 +3,7 @@
 		<p id="notice"><%= notice %></p>
 
 		<div class="team-title">
-			<div class="team-title-container">	
+			<div class="team-title-container">
 				<p>
  				 <%= link_to @team.teamname, edit_team_path(@team) %>
 				</p>
@@ -16,6 +16,7 @@
 			<% @t.each do |t| %>
 				<div class="team-dev">
 				  <%= t.user.full_name %>
+					<%# link_to 'Excluir', t.route66 , method: :destroy, data: { confirm: 'Tem certeza?' } %>
  				  <br>
 				</div>
 			<% end %>

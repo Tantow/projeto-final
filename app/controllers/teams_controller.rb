@@ -52,7 +52,17 @@ class TeamsController < ApplicationController
   #   end
   # end
 
+  def route66
+    y = UserTeam
+    y.user_id = params[:user_id]
+    y.team_id = params[:id]
 
+    if UserTeam.find_by(params[:id], params[:user_id])
+      x.destroy
+    end
+
+    redirect_to @team
+  end
 
   # GET /teams/1/edit
   def edit
