@@ -15,6 +15,9 @@ gem "mini_magick"
 #geracao automatica de senhas
 gem "passgen"
 
+
+# Gem FontAwesome
+gem "font-awesome-rails"
 # Gem de mascarasJquery
 gem 'jquery_mask_rails', '~> 0.1.0'
 # Gem para alertas bonitos

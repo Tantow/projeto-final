@@ -1,3 +1,5 @@
+<div class="project-form">
+
 <%= form_with(model: project, local: true) do |form| %>
   <% if project.errors.any? %>
     <div id="error_explanation">
@@ -15,6 +17,14 @@
     <%= form.label "Nome" %>
     <%= form.text_field :name, id: :project_name %>
   </div>
+		
+
+  <div class="field">
+    <%= form.label "Descrição" %>
+    <%= form.text_field :description, id: :project_description %>
+  </div>
+
+
 
   <div class="field">
     <%= form.label "Prazo" %>
@@ -31,14 +41,16 @@
     <%= form.text_field :manager, id: :project_manager %>
   </div>
   
-  <div>  
+  <div class="field">  
     <%= form.label "Escolha o time" %>
     <%= form.select(:team_id, @teams.collect { |team| [team.teamname, team.id] },
        {include_blank: "Time"}) %>
   </div>
 
 
-  <div class="actions">
-    <%= form.submit "Criar projeto" %>
+  <div class="form-actions">
+	  <%= form.submit "Criar projeto", id: "create-btn" %>
   </div>
-<% end %>
+  <% end %>
+
+</div>

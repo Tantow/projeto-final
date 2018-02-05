@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
   #Rotas para as páginas da presidências
+  
+  #resources :directions
   get 'directions/presidencia', to: "directions#presidencia", as: :presidencia
-
   get 'directions/gp', to: "directions#gp", as: :gp
-
   get 'directions/financeiro', to: "directions#financeiro", as: :financeiro
-
   get 'directions/projetos', to: "directions#projetos", as: :projetos
-
   get 'directions/marketing', to: "directions#marketing", as: :marketing
 
-  resources :directions
+  resources :tasks
   resources :projects
+  
+  
   #root to: "users#index"
 
   get 'reset_password/search', to: "reset_password#search", as: :reset_password

@@ -1,19 +1,5 @@
 /* team feed */
 
-.teams-body{
-	background: #fafafa;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	padding: 2.5% 0;
-}
-
-.teams-container{
-	width: 40%;
-	margin: 0 auto;
-	padding: 5% 0;
-}
-
 .new-team-container{
 	box-sizing: border-box;
 	margin: 20px auto;
@@ -68,73 +54,25 @@
 	clear: both;
 }
 
-.teams-body table{
-	border: 1px solid #7d7d7d;
-	border-collapse: collapse;
-	width: 100%;
-}
+/* teams table */
+/* outros styles de table em base.scss */
 
-.teams-body table td{
-	background: #edf3fa;
-	font-family: "Quicksand";
-	font-size: 1.4em;
-	padding: 10px;
-	border: 1px solid #7d7d7d;
-	height: 30px;
-	transition: 0.3s;	
-}
-
-.teams-body table td:hover{
+.teams-table table td:hover{
 	background: #6c9fd1;
-	color: #fafafa;
-	transition: 0.3s;	
+        transition: 0.3s;
 }
 
-.teams-body table a{
-	text-decoration: none;
-	color: #7d7d7d;
+.teams-table table td a{
+        color: #7d7d7d;
 }
 
-.teams-body table a:hover{
-	color: #fafafa;
+.teams-arquivar-btn{
+	background: #ffd58d;
+	float: right;
+        position: relative;
 }
-
-
-/*
-.teams-body table > :first-child tr{
-	border-radius: 5px 5px 0 0;
-}
-
-.teams-body table > :last-child tr{
-	border-radius: 0 0 5px 5px;
-}
-*/
 
 /* show team */
-
-.team-title{
-        width: 100%;
-
-}
-
-.team-title-container{
-        max-width: 960px;
-        margin: 0 auto;
-        margin-bottom: 30px;
-}
-
-.team-title p{ 
-        text-align: center;
-        color: #001e3d;
-        font-family: 'Quesha';
-        font-size: 6.4em;
-        font-weight: normal;
-}
-
-.team-title a{
-	text-decoration: none;
-        color: #001e3d;
-}
 
 .new-dev-container{
 	box-sizing: border-box;
@@ -262,16 +200,3 @@
 
 }
 
-.team-arquivar-btn{
-	background: #29BD64;
-	color: #fafafa;
-	cursor: pointer;
-	border: 1px solid #7d7d7d;
-	border-radius: 5px;
-	font-size: 1em;
-	padding: 5px;	
-	transition: 0.3s; 
-
-	float: right;
-	position: relative;
-}

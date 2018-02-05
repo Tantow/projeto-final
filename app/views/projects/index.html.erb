@@ -1,37 +1,44 @@
-<p id="notice"><%= notice %></p>
+<body class="body-light">
+	<div class="body-light-container projects-body-container">
 
-<h1>Projetos</h1>
+		<p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Prazo</th>
-      <th>PMO</th>
-      <th>Gerente</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+		<div class="title title-dark">
+			<div class="title-container">
+				<h1>Projetos</h1>
+			</div>
+		</div>
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.deadline %></td>
-        <td><%= project.pmo %></td>
-        <td><%= project.manager %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+		<%= link_to 'Novo Projeto', new_project_path, id:"new-btn" %>
 
-<br>
+		<div class="projects-table">
+			<table>
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Prazo</th>
+						<th>PMO</th>
+						<th>Gerente</th>
+						<th colspan="1"></th>
+					</tr>
+				</thead>
 
-<%= link_to 'Novo Projeto', new_project_path %> |
-<%= link_to 'Todos os Usuários', users_path %> |
-<%= link_to 'Todos os Times', teams_path %> |
-<%= link_to 'Todos os Projetos', projects_path %>
-
+				<tbody>
+					<% @projects.each do |project| %>
+					<tr>
+						<td><%= project.name %></td>
+						<td><%= project.deadline %></td>
+						<td><%= project.pmo %></td>
+						<td><%= project.manager %></td>
+						<td class="table-btn">
+							<%= link_to 'Ver', project, id: "show-btn" %>
+							<%= link_to 'Editar', edit_project_path(project) , id: "edit-btn" %>
+							<%= link_to 'Excluir', project, method: :delete, data: { confirm: 'Confirmar exclusão?' }, id: "destroy-btn"%>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>

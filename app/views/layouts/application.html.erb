@@ -6,15 +6,22 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     </head>
       <body>
-        <% if logged_in? %>
-			  Olá, <%= link_to current_user.full_name, user_path(id: current_user.id) %>!
-			  <%= link_to "Logout", logout_path, method: :delete %>
-		    </p>
-			<% end %>
-			<p>
+	<div class="casulo">
+	<% if !current_page?(login_path) && !current_page?(new_user_path) && !current_page?(reset_password_path)%>
+		<%= render "layouts/header"%>
+	
+	<% end %>
 
-      <%= render "layouts/avisos" %>
-      <%= yield %>
+	<%= render "layouts/avisos" %>
+      
+	<%= yield %>
+	
+	</div>
+	
+	<% if !current_page?(login_path) && !current_page?(new_user_path) && !current_page?(reset_password_path)%>
+		<%= render "layouts/footer" %>
+	<% end %>
+    
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-      </body>
+  </body>
 </html>

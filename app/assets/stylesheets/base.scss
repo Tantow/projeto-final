@@ -1,0 +1,195 @@
+/* css base */
+
+/* body e title padrao */
+
+body{
+	width: 100%;
+	min-height: 100%;
+	background: #001e3d;
+}
+
+.title{
+	width: 100%;
+        font-family: 'Quesha';
+}
+
+.title-container{
+	max-width: 960px;
+	margin: 0 auto;
+	margin-bottom: 30px;	
+        text-align: center;
+}
+
+/* paginas com body dark e title light */
+
+.body-dark{
+       background: #001e3d;
+}
+
+.title-light h1 {
+        color: #ededed;
+        font-size: 6.4em;
+        font-weight: normal;
+}
+
+/* paginas com body light e title dark */
+
+.body-light{
+        background: #fafafa;
+}
+
+.body-light-container{
+        width: 40%;
+        padding: 15vh 0;
+        margin: 0 auto;
+}
+
+.title-dark h1{
+        color: #001e3d;
+        font-size: 6em;
+        font-weight: normal;
+}
+
+.title-dark h1 a{
+        text-decoration: none;
+        color: #001e3d;
+}
+
+/* tables */
+
+table{
+        background: #edf3fa;
+        width: 100%;
+        font-family: "Quicksand";
+        border: 1px solid #7d7d7d;
+        border-collapse: collapse;
+}
+
+table td{
+        font-size: 1.4em; 
+	padding: 10px;
+        border: 1px solid #7d7d7d;
+        transition: 0.3s;       
+}
+
+table td a{
+        text-decoration: none;
+	color: #7d7d7d;
+        cursor: pointer;
+}
+
+table td a:hover{
+        color: #fafafa !important;
+}
+
+.table-btn{
+	cursor: pointer;
+        border: 1px solid #7d7d7d;
+        border-radius: 5px;
+        font-size: 1em;
+        padding: 5px;
+        transition: 0.3s;
+}
+
+/* info */
+
+/* paginas de show de user e project */
+
+.info{
+        background: #ededed;
+        font-family: 'Quicksand';
+        padding: 10px;
+        border-radius: 5px;
+}
+
+.info p{
+        font-size: 1.2em;
+        padding: 10px;
+}
+
+.info-actions{
+        margin: 20px 10px;
+        text-align: right;
+}
+
+.info-actions a{
+        text-decoration: none;
+}
+
+#info-btn{
+        background: #5D94CA;
+        color: #fafafa;
+	margin: 0 5px;
+        padding: 10px;
+        border: 2px solid #5d94ca;
+        border-radius: 10px;
+        cursor: pointer;
+	text-decoration: none;
+        font-family: 'Quicksand_Bold';
+        font-size: 1.2em;
+        transition: 0.3s;
+}
+
+#info-btn:hover{
+        border: 2px solid #001e3d;
+        color: #001e3d;
+        transition: 0.3s;
+}
+
+/* botoes */
+
+/* botoes do tipo create */
+/* 'criar projeto' */
+
+#create-btn{
+        background: #29bd64;
+        color: #fafafa;
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+        margin: 0 auto;
+        font-family: "Quicksand";
+        font-size: 1.5em;
+        font-weight: bold;
+        border: 3px solid #29bd64;
+        border-radius: 10px;
+        transition: 0.3s;
+}
+
+#create-btn:hover{
+        background: #2ccf6e;
+        border: 3px solid #18703B;
+        color: #18703B;
+}
+
+/* botoes do tipo new*/
+/* 'novo projeto', 'nova diretoria' */
+
+#new-btn{
+        background: #29bd64;
+        color: #fafafa;
+        margin: 15px 0;
+        padding: 10px;
+        text-decoration: none;
+        font-family: "Quicksand";
+        font-size: 1.4em;
+        font-weight: bold;
+        cursor: pointer;
+        border: 1px solid #7d7d7d;
+        border-radius: 5px;
+        float: right;
+        transition: 0.3s;
+}
+
+#new-btn:hover{
+        background: #2ccf6e;
+        transition: 0.3s;
+}
+
+#new-btn::after{
+        content:'';
+        display: table;
+        clear: both;
+}
+
+
