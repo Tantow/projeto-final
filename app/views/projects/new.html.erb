@@ -1,10 +1,19 @@
-<h1>Novo Projeto</h1>
+<div class="body body-light">
+	<div class="body-light-container">
 
-<%= render 'form', project: @project %>
+		<div class="title title-dark">
+			<div class="title-container">
+				<h1>Novo Projeto</h1>
+			</div>
+		</div>
 
+		<div class="info">
+		<%= render 'form', project: @project %>
 
-<%= link_to 'Voltar', projects_path %> |
-<%= link_to 'Todos os Usuários', users_path %> |
-<%= link_to 'Todos os Times', teams_path %>
+			<div class="info-actions">
+				<%= link_to 'Voltar', projects_path, id:"info-btn" %> 
+			</div>
 
+		</div>
 
+</div>

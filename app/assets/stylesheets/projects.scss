@@ -61,3 +61,71 @@
 }
 
 /* style do show do project em base.scss */
+
+/* new project */
+
+.project-form{
+	padding: 20px;
+	color: #001e3d;
+}
+
+.project-form .field label{
+	font-size: 1.4em;
+	display: block;
+	margin: 20px 0;
+}
+
+.project-form .field input{
+	background: #fafafa;
+	font-family: "Quicksand";
+	font-size: 1.4em;
+	padding: 10px 5px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.project-form .field input:focus{
+	outline: none;
+	background: #edf3fa;
+}
+
+.project-form .field select{
+	background: #fafafa;
+	color: #001e3d;
+	font-family: "Quicksand";
+	font-size: 1.4em;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.project-form .field select:focus{
+	outline: none;
+	background: #edf3fa;
+}
+
+.form-actions{
+	padding: 25px;
+}
+
+.form-actions input{
+	background: #29bd64;
+	color: #fafafa;
+	cursor: pointer;
+	display: block;
+	padding: 10px;
+	margin: 0 auto;
+	font-family: "Quicksand";
+	font-size: 1.5em;
+	font-weight: bold;
+	border: 3px solid #29bd64;
+	border-radius: 10px;
+	transition: 0.3s;
+}
+
+.form-actions input:hover{
+	background: #2ccf6e;
+	border: 3px solid #18703B;
+	color: #18703B;
+}
+
