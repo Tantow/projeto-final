@@ -1,10 +1,13 @@
-<div class="register-body">
-  <section class="register-section">
-    <div class="title">
+<body class="body-light">
+	<div class="body-light-container">
+<section class="register-container">
+
+    <div class="title title-dark">
       <div class="title-container">
-        <h1>INformativo</h1>
+        <h1>Editar perfil</h1>
       </div>
     </div>
+
     <%= form_with(model: user, local: true, html:{class: "register-container"}) do |form| %>
       
       <% if user.errors.any? %>
@@ -17,16 +20,31 @@
           </ul>
         </div>
       <% end %>
+
       
       <%= form.text_field :full_name, id: :user_full_name, :placeholder => "Nome completo", id: "name" %>
       <%= form.text_field :email, id: :user_email, :placeholder => "E-mail", id:"email" %>
-  	  <%= form.password_field :password, id: :usuario_password, :placeholder => "Senha", id:"password" %>
-  	  <%= form.password_field :password_confirmation, id: :usuario_password_confirmation, :placeholder => "Confirmação de senha", id: "confirmation" %>
-      <%= form.label "Front-end" %>
-      <%= form.radio_button :frontend, true, id: :user_front %>
-      <%= form.label "Back-end" %>
-      <%= form.radio_button :frontend, false, id: :user_front %>
-      <%= form.file_field :avatar, id: :user_avatar %>
+     
+      <div class="esp">
+	<table class="esp-table">
+		<tr>
+			<td>Front</td>
+			<td>Back</td>
+		</tr>
+		<tr>
+			<td> 
+ 	     		<%= form.radio_button :frontend, true, checked:"checked", id: :user_front %>
+			</td>
+			<td> 
+ 	     		<%= form.radio_button :frontend, false, id: :user_front %>
+			</td>
+		</tr>
+	</table>
+     </div> 
+
+	 <label for="user_avatar"><i class="fa fa-upload"></i> Altere sua foto</label>
+         <%= form.file_field :avatar, id: :user_avatar %>
+
       <% if current_user.admin == true %>
         <%= form.label "Deseja INativar este user?" %>
         <%= form.radio_button :ativo, false, id: :user_front %>
@@ -41,7 +59,7 @@
       </div>
     <% end %>
     
+</section>    
     
-    
-  </section>
+  </div>
 </div>
