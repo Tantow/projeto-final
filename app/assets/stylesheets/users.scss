@@ -15,4 +15,38 @@
 	border-radius: 50%;
 }
 
+/* edit user profile */
 
+.edit-user-container #register-btn{
+	background: #5d94ca;
+	transition: 0.3s;
+}
+
+.edit-user-container #register-btn:hover{
+	border: 2px solid #001e3d;
+	color: #001e3d;
+	transition: 0.3s;
+}
+
+#cancel-btn{
+	background: #ff704d;
+	color: #fafafa;
+	text-decoration: none;
+	text-align: center;
+        font-family: 'Quicksand_Bold';
+        font-size: 1.8em;
+        display: block;
+        margin: 0 auto;
+        width: 284px;
+        padding: 15px;
+        border: 2px solid #ff704d;
+        border-radius: 10px;
+        box-sizing: border-box;
+	transition: 0.3s;
+}
+
+#cancel-btn:hover{
+	border: 2px solid #B85137;
+	color: #B85137;
+	transition: 0.3s;
+}
