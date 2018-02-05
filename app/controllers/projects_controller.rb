@@ -1,7 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  
   before_action :user_not_logged, except: [:new, :create]
   before_action :logged_user, only: [:new, :create]
   before_action :right_user_or_admin, only: [:edit, :update, :destroy]
@@ -25,7 +24,7 @@ class ProjectsController < ApplicationController
     @teams = Team.all
   end
 
-  
+
   # GET /projects/1/edit
   def edit
     @teams = Team.all

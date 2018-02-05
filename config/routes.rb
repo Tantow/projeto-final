@@ -1,17 +1,21 @@
 Rails.application.routes.draw do
   #Rotas para as páginas da presidências
-  
-  #resources :directions
+
+
   get 'directions/presidencia', to: "directions#presidencia", as: :presidencia
+
   get 'directions/gp', to: "directions#gp", as: :gp
+
   get 'directions/financeiro', to: "directions#financeiro", as: :financeiro
+
   get 'directions/projetos', to: "directions#projetos", as: :projetos
+
   get 'directions/marketing', to: "directions#marketing", as: :marketing
 
   resources :tasks
   resources :projects
-  
-  
+  resources :directions
+
   #root to: "users#index"
 
   get 'reset_password/search', to: "reset_password#search", as: :reset_password
@@ -42,12 +46,10 @@ Rails.application.routes.draw do
    put '/teams/:id', to: 'teams#update'
    delete '/teams/:id', to: 'teams#destroy'
 
-    delete '/linkuserteam:id', to: 'teams#route66'
+    delete '/linkuserteam:id', to: 'teams#routes66', as: :routes66
     patch '/linkteamproject/:id', to: 'projects#rota', as: :add_team_to_project
     patch '/linkuserteam/:id', to: 'teams#rota', as: :add_user_to_team
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
-
 
   # #rota para o "feed" de diretorias
   # get 'directions', to: "directions#index", as: :directions

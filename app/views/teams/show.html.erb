@@ -15,7 +15,7 @@
 			<% @t.each do |t| %>
 				<div class="team-dev">
 				  <%= t.user.full_name %>
-					<%# link_to 'Excluir', t.route66 , method: :destroy, data: { confirm: 'Tem certeza?' } %>
+					<%= link_to 'Excluir', routes66_path(:tiago => t.user.id, :renato => t.team.id) , method: :delete, data: { confirm: 'Tem certeza?' } %>
  				  <br>
 				</div>
 			<% end %>

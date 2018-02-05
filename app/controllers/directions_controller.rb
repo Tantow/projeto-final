@@ -1,6 +1,5 @@
 class DirectionsController < ApplicationController
   before_action :set_direction, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   before_action :user_not_logged, except: [:new, :create]
   before_action :logged_user, only: [:new, :create]
@@ -13,12 +12,9 @@ class DirectionsController < ApplicationController
     @directions = Direction.all
   end
 
-  # GET /directions/1
-  # GET /directions/1.json
-  
   def show
   end
-  
+
   def presidencia
   end
 
@@ -46,4 +42,5 @@ class DirectionsController < ApplicationController
        x.save
      end
    end
+
 end
