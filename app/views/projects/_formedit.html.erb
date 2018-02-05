@@ -40,9 +40,6 @@
   </div>
   
 
-
-
-
   <div>  
     <%= form.label "Escolha o time" %>
     <%= form.select(:team_id, @teams.collect { |team| [team.teamname, team.id] },
@@ -51,6 +48,6 @@
 
 
   <div class="actions">
-    <%= form.submit "Criar projeto" %>
+    <%= form.submit "Alterar" %>
   </div>
 <% end %>

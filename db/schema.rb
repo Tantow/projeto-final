@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180203223224) do
+ActiveRecord::Schema.define(version: 20180205142440) do
 
   create_table "directions", force: :cascade do |t|
     t.string "name_d"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 20180203223224) do
     t.datetime "deadline"
     t.string "pmo"
     t.string "manager"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "description"
+    t.integer "team_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.boolean "done"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -74,6 +84,9 @@ ActiveRecord::Schema.define(version: 20180203223224) do
     t.boolean "admin"
     t.boolean "ativo"
     t.string "avatar"
+    t.boolean "frontend"
+    t.boolean "backend"
+    t.boolean "pmo"
   end
 
 end

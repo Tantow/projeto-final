@@ -1,5 +1,11 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+  before_action :user_not_logged, except: [:new, :create]
+  before_action :logged_user, only: [:new, :create]
+  before_action :right_user_or_admin, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:update]
 
   # GET /projects
   # GET /projects.json
@@ -32,7 +38,7 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
+        format.html { redirect_to @project, notice: 'Projeto criado com sucesso' }
         format.json { render :show, status: :created, location: @project }
       else
         format.html { render :new }
@@ -46,7 +52,7 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
+        format.html { redirect_to @project, notice: 'Projeto atualizado com suscesso' }
         format.json { render :show, status: :ok, location: @project }
       else
         format.html { render :edit }
@@ -73,7 +79,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
+      format.html { redirect_to projects_url, notice: 'Projeto arquivado com sucesso!' }
       format.json { head :no_content }
     end
   end
@@ -86,6 +92,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :deadline, :pmo, :manager)
+      params.require(:project).permit(:name, :deadline, :pmo, :manager, :description, :team_id)
     end
 end

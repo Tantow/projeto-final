@@ -1,4 +1,24 @@
 class DirectionsController < ApplicationController
+  before_action :set_direction, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+  before_action :user_not_logged, except: [:new, :create]
+  before_action :logged_user, only: [:new, :create]
+  before_action :right_user_or_admin, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:update]
+
+  # GET /directions
+  # GET /directions.json
+  def index
+    @directions = Direction.all
+  end
+
+  # GET /directions/1
+  # GET /directions/1.json
+  
+  def show
+  end
+  
   def presidencia
   end
 

@@ -20,22 +20,28 @@
       
       <%= form.text_field :full_name, id: :user_full_name, :placeholder => "Nome completo", id: "name" %>
       <%= form.text_field :email, id: :user_email, :placeholder => "E-mail", id:"email" %>
-  	  <%= form.password_field :password, id: :user_password, :placeholder => "Senha", id:"password" %>
-  	  <%= form.password_field :password_confirmation, id: :user_password_confirmation, :placeholder => "Confirmação de senha", id: "confirmation" %>
+  	  <%= form.password_field :password, id: :usuario_password, :placeholder => "Senha", id:"password" %>
+  	  <%= form.password_field :password_confirmation, id: :usuario_password_confirmation, :placeholder => "Confirmação de senha", id: "confirmation" %>
       <%= form.label "Front-end" %>
       <%= form.radio_button :frontend, true, id: :user_front %>
       <%= form.label "Back-end" %>
       <%= form.radio_button :frontend, false, id: :user_front %>
       <%= form.file_field :avatar, id: :user_avatar %>
+      <% if current_user.admin == true %>
+        <%= form.label "Deseja INativar este user?" %>
+        <%= form.radio_button :ativo, false, id: :user_front %>
+        <%= form.label "Deseja tornar esse usuário PMO?" %>
+        <%= form.radio_button :pmo, false, id: :user_front %>
       
+      <% end %>
 
 
       <div class="register-actions">
-        <%= form.submit "Cadastrar", id: "register-btn" %>
+        <%= form.submit "Alterar", id: "register-btn" %>
       </div>
     <% end %>
     
-    <p><%= link_to "Já possui uma conta?", login_path %></p> 
+    
     
   </section>
 </div>
