@@ -1,38 +1,51 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @project.name %>
-</p>
+<body class="body-light">
+	<div class="body-light-container">
 
-<p>
-  <strong>Descrição:</strong>
-  <%= @project.description %>
-</p>
+		<div class="title title-dark">
+			<div class="title-container">
+				<h1>
+					<%= @project.name %>
+				</h1>
+			</div>
+		</div>
+		
+		
+		<div class="projects info">
+			
+		<p>
+		  <strong>Descrição:</strong>
+		  <%= @project.description %>
+		</p>
+		
+		<p>
+		  <strong>Prazo:</strong>
+		  <%= @project.deadline %>
+		</p>
+		
+		<p>
+		  <strong>PMO:</strong>
+		  <%= @project.pmo %>
+		</p>
+		
+		<p>
+		  <strong>Gerente:</strong>
+		  <%= @project.manager %>
+		</p>
+		
+		<p>
+		  <strong>Time:</strong>
+		  <%= @project.team_id %>
+		</p>
 
-<p>
-  <strong>Prazo:</strong>
-  <%= @project.deadline %>
-</p>
 
-<p>
-  <strong>PMO:</strong>
-  <%= @project.pmo %>
-</p>
+		<div class="info-actions">
+			<%= link_to 'Editar', edit_project_path(@project), id:"info-btn" %>
+			<%= link_to 'Voltar', projects_path, id:"info-btn" %>
+		</div>
+	
+		</div>
 
-<p>
-  <strong>Gerente:</strong>
-  <%= @project.manager %>
-</p>
-
-<p>
-  <strong>Time:</strong>
-  <%= @project.team_id %>
-</p>
-  
-
-
-
-
-<%= link_to 'Editar', edit_project_path(@project) %> |
-<%= link_to 'Voltar', projects_path %>
+	</div>
+</body>

@@ -1,81 +1,21 @@
 /* users feed */
+/* outros styles de table em base.scss */
 
-.users-body{
-	width: 100%;
-	position: absolute;
-	height: 100%;
-	padding: 2.5% 0;
-	background: #fafafa;
-}
-
-.users-container{
-	width: 40%;
-	padding: 5% 0;
-	margin: 0 auto;
-}
-
-.users-title{
-	width: 100%;
-}
-
-.users-title-container{
-	max-width: 960px;
-	margin: 0 auto;
-	margin-bottom: 30px;
-}
-
-.users-title h1{
-	text-align: center;
-	color: #001e3d;
-	font-family: 'Quesha';
-	font-size: 6em;
-	font-weight: normal;
-}
-
-.users-table table{
-	width: 100%;
-	height: 30px;
-	background: #edf3fa;
-	color: #001e3d;
-	font-family: 'Quicksand';
-	padding: 10px;
-	border: 1px solid #7d7d7d;
-	border-collapse: collapse;
-	border-radius: 5px;
-}
-
-.users-table th{
-	font-size: 1.2em;
-	border: 1px solid #7d7d7d;
-	height: 60px;
-}
-
-.users-list td{
-	font-size: 1.4em;
+.users-table table td{
 	padding: 15px;
-	border: 1px solid #7d7d7d;
-	transition: 0.3s;
 }
 
-.users-list td a{
-	text-decoration: none;
-	color: #001e3d;
-	cursor: pointer;
-}
-
-.users-list td:hover{
+.users-table table td:hover{
 	background: #6c9fd1;
-	transition: 0.3s;
+        transition: 0.3s;
+}
+
+.users-table table td a{
+	color: #001e3d;
 }
 
 /* user profile (show) */
-
-.profile-container{
-	background: #ededed;
-	font-family: 'Quicksand';
-	padding: 10px;
-	border-radius: 5px;
-}
+/* outros styles de show em base.scss */
 
 .profile-img{
 	width: 100%;
@@ -87,37 +27,5 @@
 	margin: 20px auto;
 	border: 2px solid #5d94ca;
 	border-radius: 50%;
-}
-
-.profile-info p{
-	font-size: 1.2em;
-	padding: 10px;
-}
-
-.profile-actions{
-	margin: 20px 10px;
-	text-align: right;
-}
-
-.profile-actions a{
-	text-decoration: none;
-}
-
-#profile-btn{
-	background: #5D94CA;
-	color: #fafafa;
-	padding: 10px;
-	border: 2px solid #5d94ca;
-	border-radius: 10px;
-	cursor: pointer;
-	font-family: 'Quicksand_Bold';
-	font-size: 1.2em;
-	transition: 0.3s;
-}
-
-#profile-btn:hover{
-	border: 2px solid #001e3d;
-	color: #001e3d;
-	transition: 0.3s;
 }
 

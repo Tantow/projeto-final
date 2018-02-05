@@ -1,7 +1,11 @@
-<div class="teams-body">
-	<div class="teams-container">
-
-		<h1>Times</h1>
+<body class="body-light">	
+	<div class="body-light-container">
+	
+	<div class="title title-dark">
+		<div class="title-container">
+			<h1>Times</h1>
+		</div>
+	</div>
 
 		<p id="notice"><%= notice %></p>
 		
@@ -9,15 +13,21 @@
 			<%= render 'form', team: @team %>
 		</div>
 
-		<table>
-  			<tbody>
-  			  <% @teams.each do |team| %>
-			      <tr>
-       				 <td><%= link_to team.teamname, team %> <div class="team-arquivar-btn"><%= link_to 'Arquivar', team, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
-    			  </tr>
-  			  <% end %>
-			</tbody>
-		</table>
+		<div class="teams-table">
+			<table>
+  				<tbody>
+	  			  <% @teams.each do |team| %>
+				      <tr>
+       				  	<td><%= link_to team.teamname, team %>
+					 		<div class="table-btn teams-arquivar-btn">
+								<%= link_to 'Arquivar', team, method: :delete, data: { confirm: 'Are you sure?' } %>
+							</div>
+						</td>
+   		 			  </tr>
+  				  <% end %>
+				</tbody>
+			</table>
+		</div>
 
 	</div>
-</div>
+</body>

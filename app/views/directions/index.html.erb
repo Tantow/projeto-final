@@ -1,32 +1,35 @@
-<p id="notice"><%= notice %></p>
+<body class="body-light">
+	<div class="body-light-container">
+		
+		<p id="notice"><%= notice %></p>
+		
+		<div class="title title-dark">
+			<div class="title-container">
+				<h1>Diretorias</h1>
+			</div>
+		</div>
 
-<h1>Diretorias</h1>
+		<table>
+		  <tbody>
+		  	
+		      <tr>
+		        <td><%= link_to 'Diretoria de Gestão de Pessoas', gp_path %></td>
+		      </tr>
+		      <tr>
+		        <td><%= link_to 'Diretoria de Gestão de Marketing', marketing_path %></td>
+		      </tr>
+		      <tr>
+		        <td><%= link_to 'Diretoria de Gestão de Financeiro', financeiro_path %></td>
+		      </tr>
+		      <tr>
+		        <td><%= link_to 'Diretoria de Gestão de Projetos', projetos_path %></td>
+		      </tr>
+		      <tr>
+		        <td><%= link_to 'Diretoria de Gestão de Presidência', presidencia_path %></td>
+		      </tr>
+		      
+		  </tbody>
+		</table>
 
-<table>
-  <thead>
-
-  </thead>
-
-  <tbody>
-
-      <tr>
-        <td><%= link_to 'Diretoria de Gestão de Pessoas', gp_path %></td>
-      </tr>
-      <tr>
-        <td><%= link_to 'Diretoria de Gestão de Marketing', marketing_path %></td>
-      </tr>
-      <tr>
-        <td><%= link_to 'Diretoria de Gestão de Financeiro', financeiro_path %></td>
-      </tr>
-      <tr>
-        <td><%= link_to 'Diretoria de Gestão de Projetos', projetos_path %></td>
-      </tr>
-      <tr>
-        <td><%= link_to 'Diretoria de Gestão de Presidência', presidencia_path %></td>
-      </tr>
-
-
-
-  </tbody>
-</table>
-
+	</div>
+</body>

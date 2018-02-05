@@ -1,0 +1,85 @@
+/* projects feed */
+
+.projects-body-container{
+	width: 60%;
+}
+
+.projects-table table{
+	margin: 20px auto;
+}
+
+.projects-table thead th{
+	padding: 10px;
+}
+
+.projects-table td{
+	padding: 15px;
+}
+
+#show-btn, #edit-btn, #destroy-btn{
+	padding: 10px;
+	border: 1px solid #7d7d7d;
+	border-radius: 5px;
+	font-weight: bold;
+	display: block;
+}
+
+#show-btn, #edit-btn{
+	margin-bottom: 5px;
+	background: #ffd58d;
+}
+
+#destroy-btn{
+	background: #FF704D;
+}
+
+/* style do show do project em base.scss */
+
+/* new project */
+
+.project-form{
+	padding: 20px;
+	color: #001e3d;
+}
+
+.project-form .field label{
+	font-size: 1.4em;
+	display: block;
+	margin: 20px 0;
+}
+
+.project-form .field input{
+	background: #fafafa;
+	font-family: "Quicksand";
+	font-size: 1.4em;
+	padding: 10px 5px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.project-form .field input:focus{
+	outline: none;
+	background: #edf3fa;
+}
+
+.project-form .field select{
+	background: #fafafa;
+	color: #001e3d;
+	font-family: "Quicksand";
+	font-size: 1.4em;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.project-form .field select:focus{
+	outline: none;
+	background: #edf3fa;
+}
+
+.form-actions{
+	padding: 25px;
+}
+
+/* style do botao 'criar projeto' em base.scss */
+
