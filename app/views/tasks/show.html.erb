@@ -1,23 +1,33 @@
 <body class="body-light">
   <div class="body-light-container">
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Título:</strong>
-  <%= @task.title %>
-</p>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Conteúdo:</strong>
-  <%= @task.content %>
-</p>
 
-<p>
-  <strong>Concluído:</strong>
-  <%= @task.done %>
-</p>
+	<div class="title title-dark">
+		<div class="title-container">
+		<h1><%= @task.title %></h1>
+		</div>
+	</div>
 
-<%= link_to 'Editar', edit_task_path(@task) %> |
-<%= link_to 'Voltar', tasks_path %>
-</div>
+	<div class="info">
+		<div class="info-container">
+			<p>
+			  <strong>Conteúdo:</strong>
+			  <%= @task.content %>
+			</p>
+
+			<p>
+			  <strong>Concluído:</strong>
+			  <%= @task.done %>
+			</p>
+			
+			<div class="info-actions">
+				<%= link_to 'Editar', edit_task_path(@task), id:"info-btn" %> 
+				<%= link_to 'Voltar', tasks_path, id:"info-btn" %>
+			</div>
+		</div>
+	</div>
+
+  </div>
 </body>
