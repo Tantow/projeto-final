@@ -1,38 +1,46 @@
 <body class="body-light">
 	<div class="body-light-container">
 
-<p id="notice"><%= notice %></p>
+		<p id="notice"><%= notice %></p>
 
-<h1>Tarefas</h1>
+		<div class="title title-dark">
+			<div class="title-container">
+				<h1>Tarefas</h1>
+			</div>
+		</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Título</th>
-      <th>Conteúdo</th>
-      <th>Validando</th>
-      <th>Concluído</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+		<%= link_to 'Nova Tarefa', new_task_path, id:"new-btn" %>
 
-  <tbody>
-    <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.title %></td>
-        <td><%= task.content %></td>
-        <td><%= radio_button :ativo, false, id: :user_front %></td>
-        <td><%= radio_button :ativo, false, id: :user_front %></td>
-        <td><%= link_to 'Ver', task %></td>
-        <td><%= link_to 'Editar', edit_task_path(task) %></td>
-        <td><%= link_to 'Deletar', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+		<div class="multi-table">
+		<table>
+		  <thead>
+   		 <tr>
+     		 <th>Título</th>
+		     <th>Conteúdo</th>
+ 		     <th>Validando</th>
+   		   <th>Concluído</th>
+     		 <th colspan="1"></th>
+		   </tr>
+		  </thead>
 
+		  <tbody>
+		    <% @tasks.each do |task| %>
+		      <tr>
+		        <td><%= task.title %></td>
+		        <td><%= task.content %></td>
+		        <td><%= radio_button :ativo, false, id: :user_front %></td>
+		        <td><%= radio_button :ativo, false, id: :user_front %></td>
+		        <td class="table-btn">
+							<%= link_to 'Ver', task, id:"show-btn" %>
+		       	  <%= link_to 'Editar', edit_task_path(task), id:"edit-btn" %>
+		        	<%= link_to 'Deletar', task, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy-btn" %>
+						</td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+		</div>
 
-<%= link_to 'Nova Tarefa', new_task_path %>
 
 	</div>
 </body>
