@@ -1,11 +1,25 @@
-<!-- <div class="new-dev-container">
+<div class="project-form">
+	<% if goal.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
 
-	<div class="new-dev">
-		<%= form_for(@direction, url: add_user_to_direction_path, method: :patch) do |f|  %>
- 	 	<%= select("", "user_id", User.all.collect { |user| [ user.full_name, user.id ] },
-     			{include_blank: "PMO"}) %>
-	</div>
-   	 <%= f.submit "ADD", id: "new-dev-btn" %>
+			<ul>
+			<% goal.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+			</ul>
+		</div>
 	<% end %>
 
-</div> -->
+	<div class="field">
+		<%= form.label "Escolha o Diretor" %>
+		<%= form.select(:user_id, @user.collect { |team| [team.full_name, user.id] },
+			 {include_blank: "Diretor"}) %>
+	</div>
+
+	<div class="actions">
+		<%= form.submit %>
+	</div>
+
+
+</div>
