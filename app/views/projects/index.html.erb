@@ -11,7 +11,7 @@
 
 		<%= link_to 'Novo Projeto', new_project_path, id:"new-btn" %>
 
-		<div class="projects-table">
+		<div class="multi-table">
 			<table>
 				<thead>
 					<tr>
@@ -32,13 +32,13 @@
 						<td><%= project.pmo %></td>
 						<td><%= project.manager %></td>
 						<td><blockquote class="trello-board-compact">
-						<a href=<%= project.trello %>>Trello Board</a>
-					  </blockquote>
+						<a id="show-btn" href=<%= project.trello %>>Trello</a>
+					  	</blockquote>
 					  <script src="https://p.trellocdn.com/embed.min.js"></script></td>
 						<td class="table-btn">
 							<%= link_to 'Ver', project, id: "show-btn" %>
 							<%= link_to 'Editar', edit_project_path(project) , id: "edit-btn" %>
-							<%= link_to 'Excluir', project, method: :delete, data: { confirm: 'Confirmar exclusão?' }, id: "destroy-btn"%>
+							<%= link_to 'Deletar', project, method: :delete, data: { confirm: 'Confirmar exclusão?' }, id: "destroy-btn"%>
 						</td>
 					</tr>
 					<% end %>

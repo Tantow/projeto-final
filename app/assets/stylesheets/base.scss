@@ -107,9 +107,24 @@ table td a:hover{
         color: #001e3d;
 }
 
+/* multi table, varias colunas */
+/* tabelas do feed de projetos e tarefas */
+
+.multi-table table{
+        margin: 20px auto;
+	text-align: center;
+}
+
+.multi-table thead th{
+        padding: 10px;
+}
+
+.multi-table td{
+        padding: 15px;
+}
+
 
 /* info */
-
 /* paginas de show de user e project */
 
 .info{
@@ -131,26 +146,6 @@ table td a:hover{
 
 .info-actions a{
         text-decoration: none;
-}
-
-#info-btn{
-        background: #5D94CA;
-        color: #fafafa;
-	margin: 0 5px;
-        padding: 10px;
-        border: 2px solid #5d94ca;
-        border-radius: 10px;
-        cursor: pointer;
-	text-decoration: none;
-        font-family: 'Quicksand_Bold';
-        font-size: 1.2em;
-        transition: 0.3s;
-}
-
-#info-btn:hover{
-        border: 2px solid #001e3d;
-        color: #001e3d;
-        transition: 0.3s;
 }
 
 /* botoes */
@@ -180,7 +175,7 @@ table td a:hover{
 }
 
 /* botoes do tipo new*/
-/* 'novo projeto', 'nova diretoria' */
+/* 'novo projeto', 'nova diretoria', 'nova tarefa' */
 
 #new-btn{
         background: #29bd64;
@@ -209,4 +204,74 @@ table td a:hover{
         clear: both;
 }
 
+/* botoes do tipo info */
+/* paginas de show de user e project */
+
+#info-btn{
+        background: #5D94CA;
+        color: #fafafa;
+	margin: 0 5px;
+        padding: 10px;
+        border: 2px solid #5d94ca;
+        border-radius: 10px;
+        cursor: pointer;
+	text-decoration: none;
+        font-family: 'Quicksand_Bold';
+        font-size: 1.2em;
+        transition: 0.3s;
+}
+
+#info-btn:hover{
+        border: 2px solid #001e3d;
+        color: #001e3d;
+        transition: 0.3s;
+}
+
+/* botoes das multi tables */
+/* paginas de feed de projetos e tarefas */
+
+#show-btn, #edit-btn, #destroy-btn{
+        padding: 10px;
+        border: 1px solid #7d7d7d;
+        border-radius: 5px;
+        font-weight: bold;
+        display: block;
+}
+
+#show-btn, #edit-btn{
+        margin-bottom: 5px;
+        background: #ffd58d;
+}
+
+#destroy-btn{
+        background: #FF704D;
+}
+
+#show-btn:hover, #edit-btn:hover, #destroy-btn:hover{
+	border: 1px solid #fafafa;
+}
+
+/* botoes edit actions */
+
+.edit-actions{
+        margin: 15px 0;
+}
+
+.edit-actions #edit-actions-btn{
+        background: #5D94CA;
+        color: #fafafa;
+        margin-top: 20px;
+        border: 2px solid #5d94ca;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: 'Quicksand_Bold';
+        font-size: 1.8em;
+	transition: 0.3s;
+}
+
+.edit-actions #edit-actions-btn:hover{
+        border: 2px solid #053260;
+	color: #053260;
+	transition: 0.3s;
+}
 

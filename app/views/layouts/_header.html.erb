@@ -4,21 +4,18 @@
 			<nav class="menu-nav">
 				<ul>
 					<li><%= link_to 'Projetos', projects_path %></li>
-					<li><a href="#">Tarefas</a></li>
+					<li><%= link_to 'Tarefas', tasks_path%></li>
 					<li><a href="#">Metas</a></li>
-					<li><%= link_to 'Diretorias', directions_path%> </li>
+					<li><%= link_to 'Diretorias', directions_path%></li>
 					<li><%= link_to 'Usuários', users_path %> </li>
 					<li><%= link_to 'Times', teams_path %></li>
 					<li id="dropdown-btn"><i class="fa fa-cog"></i>
 						<div class="dropdown-container">
 							<div id="dropdown-list">
-
 								<% if logged_in? %>
-                          <%= link_to "Perfil", user_path(id: current_user.id) %>
-                          <%= link_to "Sair", logout_path, method: :delete %>
+        			 		 <%= link_to "Perfil", user_path(id: current_user.id) %>
+                   <%= link_to "Sair", logout_path, method: :delete %>
                 <% end %>
-
-
 							</div>
 						</div>
 					</li>

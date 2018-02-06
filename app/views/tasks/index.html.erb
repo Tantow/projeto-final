@@ -27,6 +27,23 @@
 
                     <td><%= check_box :done, false, id: :user_front %></td>
 
+		  <tbody>
+		    <% @tasks.each do |task| %>
+		      <tr>
+		        <td><%= task.title %></td>
+		        <td><%= task.content %></td>
+		        <td><%= radio_button :ativo, false, id: :user_front %></td>
+		        <td><%= radio_button :ativo, false, id: :user_front %></td>
+		        <td class="table-btn">
+							<%= link_to 'Ver', task, id:"show-btn" %>
+		       	  <%= link_to 'Editar', edit_task_path(task), id:"edit-btn" %>
+		        	<%= link_to 'Deletar', task, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy-btn" %>
+						</td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+		</div>
 
                   <% end %> 
                   <% if task.confirmation == false %>
