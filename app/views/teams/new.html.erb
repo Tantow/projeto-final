@@ -1,6 +1,21 @@
-<h1>Novo Time</h1>
+<body class="body-light">
+	<div class="body-light-container">
 
-<%= render 'form', team: @team %>
+		<div class="title title-dark">
+			<div class="title-container">
+				<h1>Novo Time</h1>
+			</div>
+		</div>
+
+		<div class="info">
+			<%= render 'form', team: @team %>
+
+			<div class="info-actions">
+				<%= link_to 'Voltar', teams_path %>
+			</div>
+
+		</div>
 
 
-<%= link_to 'Voltar', teams_path %>
+	</div>
+</body>
