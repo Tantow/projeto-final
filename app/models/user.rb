@@ -5,7 +5,7 @@ class User < ApplicationRecord
 	has_many :teams_users
 	has_many :teamprojects
 	
-	has_many :direction_users
+	has_many :directions_users
 
 	has_secure_password
 

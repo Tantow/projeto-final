@@ -4,8 +4,8 @@ class TeamsController < ApplicationController
 
   before_action :user_not_logged, only: [:new, :create, :update, :edit, :destroy]
   before_action :not_admin, only: [:new, :create, :update, :edit, :destroy]
- 
-  
+
+
 
   # GET /teams
   # GET /teams.json
@@ -50,13 +50,6 @@ class TeamsController < ApplicationController
 
     redirect_to @team
   end
-
-  # def deletedev
-  #   @y = UserTeam
-  #   @y.destroy
-  #   respond_to do |format|
-  #   end
-  # end
 
   def routes66
     y = UserTeam.find_by(user_id: params[:tiago], team_id: params[:id])

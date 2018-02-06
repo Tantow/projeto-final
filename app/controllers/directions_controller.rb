@@ -3,7 +3,7 @@ class DirectionsController < ApplicationController
 
   before_action :user_not_logged, only: [:new, :create, :update, :edit, :destroy]
   before_action :not_admin, only: [:new, :create, :update, :edit, :destroy]
- 
+
 
   # GET /directions
   # GET /directions.json
@@ -12,6 +12,7 @@ class DirectionsController < ApplicationController
   end
 
   def show
+    @t = UserTeam.where(team_id: params[:id])
   end
 
   def presidencia
@@ -29,19 +30,29 @@ class DirectionsController < ApplicationController
   def marketing
   end
 
-  # Funcao que vai redirecionar o user para o relacionamento
-  def pmo
-    # team = Team.find(params[:id])
-    # user = User.find(params[:user_id])
-    x = UserTeam.new
-    x.user_id = params[:user_id]
-    x.team_id = params[:id]
-     if UserTeam.find_by(team_id: params[:id], user_id: params[:user_id])
-     else
-       x.save
-     end
+   # Funcao que vai redirecionar o user para o relacionamento
+   def rota
+     # team = Team.find(params[:id])
+     # user = User.find(params[:user_id])
+     x = UserTeam.new
+     x.user_id = params[:user_id]
+     x.team_id = params[:id]
+      if UserTeam.find_by(team_id: params[:id], user_id: params[:user_id])
+      else
+        x.save
+      end
+
+     redirect_to @team
    end
 
+   def routes66
+     y = UserTeam.find_by(user_id: params[:tiago], team_id: params[:id])
+     y.destroy
+
+     @team = Team.find_by(id: params[:renato])
+
+     redirect_to @team
+   end
 
 
   private
