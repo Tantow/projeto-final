@@ -2,13 +2,25 @@
   <div class="body-light-container">
 
     <div class="title title-dark">
-      <div class="title-container"> 
+      <div class="title-container">
         <h1>Marketing</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Diretor</th>
+            </tr>
+          </thead>
+          <tbody>
+              <% @users.each do |user| %>
+              <tr>
+                <td><%= user.full_name %></td>
+                <td><%= user.admin %></td>
+              </tr>
+              <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
-
   </div>
 </body>
-
-
-
