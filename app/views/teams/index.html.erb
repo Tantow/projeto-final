@@ -7,9 +7,11 @@
 		</div>
 	</div>
 
-		<script>
-			swal("<%= notice %>","","error");
-		</script>
+		<% if (notice) %>
+			<script>
+				swal("<%= notice %>","","error");
+			</script>
+		<% end %>
 		
 		<div class="new-team-container">
 			<%= render 'form', team: @team %>

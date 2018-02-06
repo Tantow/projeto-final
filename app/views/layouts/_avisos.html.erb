@@ -1,7 +1,7 @@
-<% if (notice || alert) %>
+<% if (notice) %>
     <script>
-    	swal("<%= notice %>","","error");
-    	swal("<%= alert %>","","error");
+        $(document).ready(function(){
+            swal("<%= notice %>","","");
+        });
     </script>
 <% end %>
-

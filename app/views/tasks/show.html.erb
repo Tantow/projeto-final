@@ -1,7 +1,10 @@
 <body class="body-light">
   <div class="body-light-container">
-
-	<p id="notice"><%= notice %></p>
+	<% if (notice) %>
+		<script>
+			<p id="notice"><%= notice %></p>
+		</script>
+	<% end %>
 
 
 	<div class="title title-dark">

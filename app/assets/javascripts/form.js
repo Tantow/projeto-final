@@ -1,4 +1,4 @@
-$('document').ready(function(){
+$(document).ready(function(){
     
     function validateEmail(email) {
         var re = /[a-z]{2,20}\.[a-z]{2,20}\@injunior.com.br/;
@@ -40,9 +40,6 @@ $('document').ready(function(){
     });
     $('.new-project-actions').click(function(e) {
         
-        if (!($('#project_deadline').val())){
-            alert("Batata");
-        }
         if (!($('#project_name').val()) || !($('#project_description').val()) || !($('#project_manager').val())){
             swal("Preencha todos os campos.", "", "error");
             e.preventDefault();

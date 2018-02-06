@@ -2,9 +2,11 @@
 	<div class="body-light-container">
 		<div class="users-nav">
 			<div class="users-nav-container">
-				<script>
-					swal("<%= notice %>","","error");
-				</script>
+				<% if (notice) %>
+					<script>
+						swal("<%= notice %>","","error");
+					</script>
+				<% end %>
 			</div>
 		</div>
 		<div class="title title-dark">
