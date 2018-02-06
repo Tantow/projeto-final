@@ -4,15 +4,21 @@
 /* outros styles de show em base.scss */
 
 .profile-img{
-	width: 100%;
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	border: 2px solid #7d7d7d;
+	margin: 20px auto;
+	overflow: hidden;
+	display: block;
 }
 
 .profile-img img{
-	max-width: 180px;
-	display: block;
-	margin: 20px auto;
-	border: 2px solid #5d94ca;
-	border-radius: 50%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);	
+	width: auto;
+	height: 100%;
 }
 
 /* edit user profile */
