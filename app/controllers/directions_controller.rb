@@ -12,22 +12,27 @@ class DirectionsController < ApplicationController
   end
 
   def show
-    @t = UserTeam.where(team_id: params[:id])
+
   end
 
   def presidencia
+    @users = User.all
   end
 
   def gp
+    @users = User.all
   end
 
   def financeiro
+    @users = User.all
   end
 
   def projetos
+    @users = User.all
   end
 
   def marketing
+    @users = User.all
   end
 
    # Funcao que vai redirecionar o user para o relacionamento

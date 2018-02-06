@@ -5,7 +5,24 @@
       <div class="title-container">
         <h1>Financeiro</h1>
 
-        <%# render 'form', direction: @direction %>
+        <%# render 'form', direction: @users %>
+
+        <table>
+          <thead>
+            <tr>
+  						<th>Nome</th>
+  						<th>Diretor</th>
+  					</tr>
+          </thead>
+          <tbody>
+              <% @users.each do |user| %>
+              <tr>
+                <td><%= user.full_name %></td>
+    						<td><%= user.admin %></td>
+              </tr>
+              <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
 
