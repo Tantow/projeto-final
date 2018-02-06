@@ -15,10 +15,9 @@
 			<table>
 			  <thead>
 			    <tr>
-			      <th>Title</th>
-			      <th>Description</th>
-						<th>Start</th>
-						<th>Deadline</th>
+			      <th>Título</th>
+			      <th>Início</th>
+						<th>Fim</th>
 						<th>Status</th>
 						<th colspan="1"></th>
 					</tr>
@@ -27,11 +26,10 @@
 			  <tbody>
 					<% @goals.each do |goal| %>
 					<tr>
-						<td><%= goal.description %></td>
+						<td><%= goal.title %></td>
 						<td><%= goal.start %></td>
 						<td><%= goal.deadline %></td>
 						<td><%= goal.status %></td>
-						<td><%= goal.title %></td>
 						<td class="table-btn">
 								<%= link_to 'Ver', goal, id:"show-btn" %>
 								<%= link_to 'Editar', edit_goal_path(goal), id:"edit-btn" %>
