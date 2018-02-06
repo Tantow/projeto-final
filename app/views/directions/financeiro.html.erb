@@ -11,6 +11,7 @@
           <thead>
             <tr>
   						<th>Nome</th>
+              <th>Admin</th>
   						<th>Diretor</th>
   					</tr>
           </thead>
@@ -18,11 +19,19 @@
               <% @users.each do |user| %>
               <tr>
                 <td><%= user.full_name %></td>
-    						<td><%= user.admin %></td>
+                <td><%= user.admin %></td>
+    						<td>
+                  <%= form_for(:direction, url: :teste , method: :patch) do |f| %>
+                  <%= check_box(:user, :director) %>
+                  <%= hidden_field_tag :user_id, user.id %>
+                  <%= f.submit "add diretor" %>
+                  <% end %>
+                </td>
               </tr>
               <% end %>
           </tbody>
         </table>
+        
       </div>
     </div>
 
