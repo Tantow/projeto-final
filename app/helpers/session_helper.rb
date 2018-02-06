@@ -60,17 +60,9 @@ module SessionHelper
     end
   end
 
-  def admin
-    if current_user.admin == true
-      permit
-    end
-  end  
 
 
-
-
-
-
+ 
 
       
 end

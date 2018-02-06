@@ -48,7 +48,7 @@
 
       <% if current_user.admin == true %>
         <%= form.label "Deseja INativar este user?" %>
-        <%= form.radio_button :ativo, id: :ativo %>
+        <%= form.check_box :ativo, id: :ativo %>
         <%= form.label "Deseja tornar esse usuário PMO?" %>
         <%= form.check_box :pmo, { id: :pmo }, true, false %>
         <%= form.label "Deseja tornar esse usuário administrador?" %>

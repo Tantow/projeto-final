@@ -6,11 +6,12 @@ class UsersController < ApplicationController
   before_action :right_user_or_admin, only: [:edit, :update, :destroy]
   
   
+  
 
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.where(ativo: false)
   end
 
   # GET /users/1
