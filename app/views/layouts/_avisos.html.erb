@@ -1,2 +1,7 @@
-<p><%= notice %></p>
-<p><%= alert %></p>
+<% if (notice || alert) %>
+    <script>
+    	swal("<%= notice %>","","error");
+    	swal("<%= alert %>","","error");
+    </script>
+<% end %>
+

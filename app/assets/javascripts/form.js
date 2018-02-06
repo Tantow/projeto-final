@@ -25,4 +25,28 @@ $('document').ready(function(){
             }
         }
     });
+    
+    $('.login-actions').click(function(e){
+        if(!($("#email").val()) || !($("#password").val())){
+            swal("Preencha todos os campos.", "", "error");
+            e.preventDefault();
+        }
+    });
+    $('.login-actions').click(function(e){
+        if(!($("#email").val()) || !($("#password").val())){
+            swal("Preencha todos os campos.", "", "error");
+            e.preventDefault();
+        }
+    });
+    $('.new-project-actions').click(function(e) {
+        
+        if (!($('#project_deadline').val())){
+            alert("Batata");
+        }
+        if (!($('#project_name').val()) || !($('#project_description').val()) || !($('#project_manager').val())){
+            swal("Preencha todos os campos.", "", "error");
+            e.preventDefault();
+        }
+    });
+    
 });

@@ -2,7 +2,9 @@
 	<div class="body-light-container">
 		<div class="users-nav">
 			<div class="users-nav-container">
-				<p id="notice"><%= notice %></p>
+				<script>
+					swal("<%= notice %>","","error");
+				</script>
 			</div>
 		</div>
 		<div class="title title-dark">
