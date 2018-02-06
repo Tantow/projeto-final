@@ -50,6 +50,16 @@ class DirectionsController < ApplicationController
      redirect_to @team
    end
 
+   def teste
+     d = User.find(params[:user_id])
+     d.admin = false if params[:user][:director] == "0"
+     d.admin = true if params[:user][:director] == "1" #na checkbox 0 = false 1 = verdadeiro
+     d.save
+
+     redirect_to financeiro_path
+   end
+
+
    def routes66
      y = UserTeam.find_by(user_id: params[:tiago], team_id: params[:id])
      y.destroy
@@ -59,9 +69,9 @@ class DirectionsController < ApplicationController
      redirect_to @team
    end
 
-
   private
   def set_direction
     @direction = Direction.find(params[:id])
   end
+
 end
