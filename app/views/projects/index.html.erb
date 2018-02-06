@@ -32,8 +32,8 @@
 						<td><%= project.pmo %></td>
 						<td><%= project.manager %></td>
 						<td><blockquote class="trello-board-compact">
-						<a href=<%= project.trello %>>Trello Board</a>
-					  </blockquote>
+						<a id="show-btn" href=<%= project.trello %>>Trello</a>
+					  	</blockquote>
 					  <script src="https://p.trellocdn.com/embed.min.js"></script></td>
 						<td class="table-btn">
 							<%= link_to 'Ver', project, id: "show-btn" %>

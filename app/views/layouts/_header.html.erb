@@ -12,13 +12,10 @@
 					<li id="dropdown-btn"><i class="fa fa-cog"></i>
 						<div class="dropdown-container">
 							<div id="dropdown-list">
-
 								<% if logged_in? %>
-                          <%= link_to "Perfil", user_path(id: current_user.id) %>
-                          <%= link_to "Sair", logout_path, method: :delete %>
+        			 		 <%= link_to "Perfil", user_path(id: current_user.id) %>
+                   <%= link_to "Sair", logout_path, method: :delete %>
                 <% end %>
-
-
 							</div>
 						</div>
 					</li>
