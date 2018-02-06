@@ -4,22 +4,32 @@
     <div class="title title-dark">
       <div class="title-container">
         <h1>Projetos</h1>
-          <table>
-            <thead>
+
+        <table>
+          <thead>
+            <tr>
+  						<th>Nome</th>
+              <th>Admin</th>
+  						<th>Diretor</th>
+  					</tr>
+          </thead>
+          <tbody>
+              <% @users.each do |user| %>
               <tr>
-                <th>Nome</th>
-                <th>Diretor</th>
+                <td><%= user.full_name %></td>
+                <td><%= user.admin %></td>
+    						<td>
+                  <%= form_for(:direction, url: :projetos , method: :patch) do |f| %>
+                  <%= check_box(:user, :director) %>
+                  <%= hidden_field_tag :user_id, user.id %>
+                  <%= f.submit "add diretor" %>
+                  <% end %>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-                <% @users.each do |user| %>
-                <tr>
-                  <td><%= user.full_name %></td>
-                  <td><%= user.admin %></td>
-                </tr>
-                <% end %>
-            </tbody>
-          </table>
+              <% end %>
+          </tbody>
+        </table>
+
       </div>
     </div>
   </div>
