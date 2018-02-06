@@ -18,12 +18,14 @@
               <tr>
                 <td><%= user.full_name %></td>
                 <td><%= user.admin %></td>
-    						<td>
+    		<td>
+		<div class="info-actions">
                   <%= form_for(:direction, url: :marketing , method: :patch) do |f| %>
                   <%= check_box(:user, :director) %>
                   <%= hidden_field_tag :user_id, user.id %>
-                  <%= f.submit "add diretor" %>
+                  <%= f.submit "adicionar", id:"info-btn" %>
                   <% end %>
+		</div>
                 </td>
               </tr>
               <% end %>
