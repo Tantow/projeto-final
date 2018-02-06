@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180205190041) do
+ActiveRecord::Schema.define(version: 20180206131317) do
 
   create_table "directions", force: :cascade do |t|
     t.string "name_d"
     t.string "pmo"
     t.string "office"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "goals", force: :cascade do |t|
+    t.text "description"
+    t.datetime "start"
+    t.datetime "deadline"
+    t.boolean "status"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
