@@ -7,7 +7,13 @@
 			</div>
 		</div>
 
-		<%= render 'form', task: @task %>
+		<div class="info">
+			<%= render 'form', task: @task %>
 
+			<div class="info-actions">
+			 <%= link_to 'Voltar', tasks_path, id:"info-btn" %>
+			</div>
+
+  		</div>
   </div>
 </body>
