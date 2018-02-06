@@ -25,18 +25,27 @@
 				</p>
 				<p>
 
-				<strong>Especialidade:</strong>
-				<% if current_user.frontend == true %>
+				<strong>Espeliazação:</strong>
+				<% if @user.frontend == true %>
 					<%= 'Front-end' %>
 				<% else %>
 					<%= 'Back-end' %>
 				<% end %>
 				</p>
 
-	
+				<p>
+				<% if @user.pmo == true %>
+					<%= 'PMO' %>
+				
+				<% end %>
+				</p>
 
-
-
+				<p>
+				<% if @user.admin == true %>
+					<%= 'Administrador' %>
+				
+				<% end %>
+				</p>
 
 				</div>
 

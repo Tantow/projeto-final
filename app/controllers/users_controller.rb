@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   before_action :user_not_logged, except: [:new, :create]
   before_action :logged_user, only: [:new, :create]
   before_action :right_user_or_admin, only: [:edit, :update, :destroy]
-  before_action :correct_user, only: [:update]
   
   
 
@@ -98,6 +97,6 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:full_name,
-       :email, :password, :password_confirmation, :avatar, :frontend, :admin)
+       :email, :password, :password_confirmation, :avatar, :frontend, :admin, :pmo)
     end
 end

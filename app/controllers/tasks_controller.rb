@@ -19,10 +19,7 @@ class TasksController < ApplicationController
   end
 
 
-  def to_do_task
-   
-    
-  end
+ 
   # GET /tasks/new
   def new
     @task = Task.new

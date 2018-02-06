@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label "PMO" %>
-    <%= form.text_field :pmo, id: :project_pmo %>
+    <%= form.select(:project_pmo, @pmos) %>
   </div>
 
   <div class="field">
