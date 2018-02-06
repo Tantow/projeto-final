@@ -1,5 +1,18 @@
-<h1>New Goal</h1>
+<body class="body-light">
+	<div class="body-light-container">
 
-<%= render 'form', goal: @goal %>
+		<div class="title title-dark">
+			<div class="title-container">
+				<h1>Nova Meta</h1>
+			</div>
+		</div>
 
-<%= link_to 'Back', goals_path %>
+		<div class="info">
+			<%= render 'form', goal: @goal %>
+			<div class="info-actions">
+				<%= link_to 'Voltar', goals_path, id:"info-btn" %>
+			</div>
+		</div>
+
+	</div>
+</body>

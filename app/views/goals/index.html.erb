@@ -1,37 +1,50 @@
-<p id="notice"><%= notice %></p>
+<body class="body-light">
+	<div class="body-light-container big-body-container">
 
-<h1>Goals</h1>
+		<p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Start</th>
-      <th>Deadline</th>
-      <th>Status</th>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+		<div class="title title-dark">
+			<div class="title-container">
+				<h1>Metas</h1>
+			</div>
+		</div>
 
-  <tbody>
-    <% @goals.each do |goal| %>
-      <tr>
-        <td><%= goal.description %></td>
-        <td><%= goal.start %></td>
-        <td><%= goal.deadline %></td>
-        <td><%= goal.status %></td>
-        <td><%= goal.title %></td>
-        <td><%= link_to 'Show', goal %></td>
-        <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
-        <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+		<%= link_to 'Nova Meta', new_goal_path, id:"new-btn" %>
+
+		<div class="multi-table">
+			<table>
+			  <thead>
+			    <tr>
+			      <th>Title</th>
+			      <th>Description</th>
+						<th>Start</th>
+						<th>Deadline</th>
+						<th>Status</th>
+						<th colspan="1"></th>
+					</tr>
+  			</thead>
+
+			  <tbody>
+					<% @goals.each do |goal| %>
+					<tr>
+						<td><%= goal.description %></td>
+						<td><%= goal.start %></td>
+						<td><%= goal.deadline %></td>
+						<td><%= goal.status %></td>
+						<td><%= goal.title %></td>
+						<td class="table-btn">
+								<%= link_to 'Ver', goal, id:"show-btn" %>
+								<%= link_to 'Editar', edit_goal_path(goal), id:"edit-btn" %>
+								<%= link_to 'Deletar', goal, method: :delete, data: { confirm: 'Confirmar exclusão?' }, id:"destroy-btn" %>
+						</td>
+					</tr>
+					<% end %>
+			  </tbody>
+		</table>
+	</div>
 
 <%# render 'formconcluid', goal: @goal %>
 
-<br>
 
-<%= link_to 'New Goal', new_goal_path %>
+</div>
+</body>

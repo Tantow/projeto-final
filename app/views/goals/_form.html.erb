@@ -1,3 +1,5 @@
+<div class="project-form">
+
 <%= form_with(model: goal, local: true) do |form| %>
   <% if goal.errors.any? %>
     <div id="error_explanation">
@@ -15,7 +17,7 @@
   <br>
 
   <div class="field">
-    <%= form.label "Titulo" %>
+    <%= form.label "Título" %>
     <%= form.text_field :title, id: :goal_title %>
   </div>
 
@@ -40,7 +42,7 @@
   </div> -->
 
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-actions">
+    <%= form.submit "Criar meta", id:"create-btn" %>
   </div>
 <% end %>
