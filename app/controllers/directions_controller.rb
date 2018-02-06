@@ -1,14 +1,9 @@
 class DirectionsController < ApplicationController
   before_action :set_direction, only: [:show, :edit, :update, :destroy]
-<<<<<<< HEAD
-  
-=======
->>>>>>> pedro
 
-  before_action :user_not_logged, except: [:new, :create]
-  before_action :logged_user, only: [:new, :create]
-  before_action :right_user_or_admin, only: [:edit, :update, :destroy]
-  before_action :correct_user, only: [:update]
+  before_action :user_not_logged, only: [:new, :create, :update, :edit, :destroy]
+  before_action :not_admin, only: [:new, :create, :update, :edit, :destroy]
+ 
 
   # GET /directions
   # GET /directions.json

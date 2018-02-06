@@ -48,7 +48,7 @@ module SessionHelper
 
   def not_admin
     if current_user.admin != true
-    redirect_to feed_path
+    redirect_to user_path(id: current_user.id)
     end
   end
 

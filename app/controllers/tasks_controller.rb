@@ -2,6 +2,9 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
   
 
+  before_action :user_not_logged, only: [:new, :create, :update, :edit, :destroy]
+  before_action :not_admin, only: [:new, :create, :update, :edit, :destroy]
+ 
   
 
   # GET /tasks
@@ -15,6 +18,11 @@ class TasksController < ApplicationController
   def show
   end
 
+
+  def to_do_task
+   
+    
+  end
   # GET /tasks/new
   def new
     @task = Task.new

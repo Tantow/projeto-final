@@ -1,6 +1,9 @@
 class SessionController < ApplicationController
   before_action :logged_user, only: [:new , :create]
   before_action :user_not_logged, except: [:new, :create]
+ 
+ 
+ 
   def new
   end
   

@@ -1,37 +1,56 @@
-<body class="body-light">
-	<div class="body-light-container">
+  <body class="body-light">
+    <div class="body-light-container">
 
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<h1>Tarefas</h1>
+  <h1>Tarefas</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Título</th>
-      <th>Conteúdo</th>
-      <th>Validando</th>
-      <th>Concluído</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tasks.each do |task| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= task.title %></td>
-        <td><%= task.content %></td>
-        <td><%= radio_button :ativo, false, id: :user_front %></td>
-        <td><%= radio_button :ativo, false, id: :user_front %></td>
-        <td><%= link_to 'Ver', task %></td>
-        <td><%= link_to 'Editar', edit_task_path(task) %></td>
-        <td><%= link_to 'Deletar', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Título</th>
+        <th>Conteúdo</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+          <% @tasks.each do |task| %>
+                <tr>
+                  <td><%= task.title %></td>
+                  <td><%= task.content %></td>
+                  <td><%= check_box :confirmation, false, id: :user_front %></td>
 
 
+                  <% if current_user.admin == true %>
+
+
+                    <td><%= check_box :done, false, id: :user_front %></td>
+
+
+                  <% end %> 
+                  <% if task.confirmation == false %>
+                    <td>A fazer</td>
+                  <% else %>
+                    <td> Validando </td>
+                  <% end %>
+                  <% if current_user.admin == true %>
+                    <% if task.confirmation == true && task.done == false %>
+                      <td>A validar</td>
+                    <% else %>
+                      <td>Concluída</td>
+                    <% end %>
+                        
+                    <% end %>  
+                        
+       
+              <td><%= link_to 'Ver', task %></td>
+              <td><%= link_to 'Editar', edit_task_path(task) %></td>
+              <td><%= link_to 'Deletar', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+    </tbody>
+  </table>
 <%= link_to 'Nova Tarefa', new_task_path %>
 
 	</div>
