@@ -11,14 +11,21 @@
 
 		<%= render 'formnewdev', team: @team %>
 
-		<div class="team-dev-container">
+		<div class="teams-table">
+			<table>
+			<tbody>
 			<% @t.each do |t| %>
-				<div class="team-dev">
-				  <%= t.user.full_name %>
+				<tr>
+				    <td><%= t.user.full_name %>
+					<div class="table-btn teams-arquivar-btn">
 					<%= link_to 'Excluir', routes66_path(:tiago => t.user.id, :renato => t.team.id) , method: :delete, data: { confirm: 'Tem certeza?' } %>
- 				  <br>
-				</div>
+ 				  	</div>
+				    </td>
+				</tr>
 			<% end %>
+			</tbody>
+			</table>
+		</div>
 		</div>
 	</div>
 </body>

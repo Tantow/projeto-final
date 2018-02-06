@@ -1,5 +1,5 @@
-<section class="edit-container">
-<%= form_with(model: task, local: true, html:{class: "register-container"}) do |form| %>
+<div class="project-form">
+<%= form_with(model: task, local: true) do |form| %>
   <% if task.errors.any? %>
     <div id="error_explanation">
       <ul>
@@ -13,21 +13,22 @@
   <% end %>
 
   <div class="field">
-    <%= form.text_field :title, :placeholder => "Título", id: :task_title %>
+    <%= form.label "Título" %>
+    <%= form.text_field :title, id: :task_title %>
   </div>
 
   <div class="field">
-    <%= form.text_field :content, :placeholder => "Conteúdo", id: :task_content %>
+    <%= form.label "Conteúdo" %>
+    <%= form.text_field :content, id: :task_content %>
   </div>
 
-  <div class="field">
+  <div class="concluido">
     <%= form.label "Concluído" %>
     <%= form.check_box :done, id: :task_done %>
   </div>
 
-  <div class="edit-actions">
-    <%= form.submit "Adicionar tarefa", id:"edit-actions-btn" %>
-    <%= link_to 'Cancelar', tasks_path, id:"cancel-btn" %>
+  <div class="form-actions">
+    <%= form.submit "Criar tarefa", id:"create-btn" %>
   </div>
 <% end %>
 </div>

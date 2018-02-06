@@ -32,19 +32,22 @@
 	cursor: pointer;
 	border: 1px solid #7d7d7d;
 	border-radius: 0 5px 5px 0;
+	font-family: "Quicksand";
 	font-size: 1.4em;
 	font-weight: bold;
 	padding: 10px;	
 	transition: 0.3s; 
 
 	height: 50px;	
-	width: 80px;
+	min-width: 80px;
 	float: right;
 	position: relative;
 }
 
 #new-team-btn:hover{
 	background: #2CCF6E;
+	border: 1px solid #18703b;
+	color: #18703b;
 	transition: 0.3s; 
 }
 

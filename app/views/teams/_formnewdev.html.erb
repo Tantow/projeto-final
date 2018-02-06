@@ -5,7 +5,7 @@
  	 	<%= select("", "user_id", User.all.collect { |user| [ user.full_name, user.id ] },
      			{include_blank: "Desenvolvedor"}) %>
 	</div>
-   	 <%= f.submit "ADD", id: "new-dev-btn" %>
+   	 <%= f.submit "ADD", id: "new-team-btn" %>
 	<% end %>
 
 </div>
