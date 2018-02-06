@@ -22,8 +22,9 @@
                   <%= form_for(:direction, url: :mari , method: :patch) do |f| %>
                   <%= check_box(:user, :director) %>
                   <%= hidden_field_tag :user_id, user.id %>
-                  <%= f.submit "add diretor" %>
+                  <%= f.submit "adicionar", id:"info-btn" %>
                   <% end %>
+		</div>
                 </td>
               </tr>
               <% end %>
