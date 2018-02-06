@@ -266,9 +266,12 @@ table td a:hover{
         cursor: pointer;
         font-family: 'Quicksand_Bold';
         font-size: 1.8em;
+	transition: 0.3s;
 }
 
 .edit-actions #edit-actions-btn:hover{
-        border: 2px solid #fafafa;
+        border: 2px solid #053260;
+	color: #053260;
+	transition: 0.3s;
 }
 
