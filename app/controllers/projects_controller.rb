@@ -21,12 +21,14 @@ class ProjectsController < ApplicationController
   def new
     @project = Project.new
     @teams = Team.all
+    @pmos = User.where(pmo: true).collect{|c| [c.full_name, c.id]}
   end
 
 
   # GET /projects/1/edit
   def edit
     @teams = Team.all
+    @pmos = User.where(pmo: true).collect{|c| [c.full_name, c.id]}
   end
 
   # POST /projects

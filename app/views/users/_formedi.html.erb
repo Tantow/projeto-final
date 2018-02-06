@@ -33,10 +33,10 @@
 		</tr>
 		<tr>
 			<td> 
- 	     		<%= form.radio_button :frontend, true, checked:"checked", id: :user_front %>
+ 	     		<%= form.radio_button :frontend, true, id: :frontend %>
 			</td>
 			<td> 
- 	     		<%= form.radio_button :frontend, false, id: :user_front %>
+ 	     		<%= form.radio_button :frontend, false, id: :frontend %>
 			</td>
 		</tr>
 	</table>
@@ -47,11 +47,15 @@
 
       <% if current_user.admin == true %>
         <%= form.label "Deseja INativar este user?" %>
-        <%= form.radio_button :ativo, false, id: :user_front %>
+        <%= form.radio_button :ativo, id: :ativo %>
         <%= form.label "Deseja tornar esse usuário PMO?" %>
-        <%= form.radio_button :pmo, false, id: :user_front %>
+        <%= form.check_box :pmo, { id: :pmo }, true, false %>
+        <%= form.label "Deseja tornar esse usuário administrador?" %>
+        <%= form.check_box :admin, { id: :admin }, true, false %>
       
       <% end %>
+
+      
 
 
       <div class="edit-actions">
