@@ -15,6 +15,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @teams = Team.all
+    @pmo = User.find(@project.pmo)
   end
 
   # GET /projects/new
@@ -41,6 +42,8 @@ class ProjectsController < ApplicationController
         format.html { redirect_to @project, notice: 'Projeto criado com sucesso ' }
         format.json { render :show, status: :created, location: @project }
       else
+        @teams = Team.all
+        @pmos = User.where(pmo: true).collect{|c| [c.full_name, c.id]}
         format.html { render :new }
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
