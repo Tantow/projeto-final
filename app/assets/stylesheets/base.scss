@@ -180,6 +180,7 @@ table td a:hover{
         background: #2ccf6e;
         border: 3px solid #18703B;
         color: #18703B;
+        transition: 0.3s;
 }
 
 /* botoes do tipo new*/
@@ -195,7 +196,7 @@ table td a:hover{
         font-size: 1.4em;
         font-weight: bold;
         cursor: pointer;
-        border: 1px solid #7d7d7d;
+        border: 2px solid #29bd64;
         border-radius: 5px;
         float: right;
         transition: 0.3s;
@@ -203,6 +204,8 @@ table td a:hover{
 
 #new-btn:hover{
         background: #2ccf6e;
+        border: 2px solid #18703B;
+        color: #18703B;
         transition: 0.3s;
 }
 
