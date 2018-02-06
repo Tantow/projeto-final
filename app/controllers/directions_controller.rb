@@ -1,7 +1,7 @@
 class DirectionsController < ApplicationController
   before_action :set_direction, only: [:show, :edit, :update, :destroy]
 
-  before_action :user_not_logged, only: [:new, :create, :update, :edit, :destroy]
+  before_action :user_not_logged, only: [:index, :new, :create, :update, :edit, :destroy]
   before_action :not_admin, only: [:new, :create, :update, :edit, :destroy]
 
 

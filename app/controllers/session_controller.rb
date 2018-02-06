@@ -13,7 +13,7 @@ class SessionController < ApplicationController
 	  if user && user.authenticate(params[:session][:password])
 			log_in user
 	  else
-	    flash.now[:alert] = "Usuário ou senha incorretos."
+	    flash.now[:alert] = "Usuário ou senha incorretos!"
 	    render "new"
 	  end
 

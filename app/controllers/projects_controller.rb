@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   
-  before_action :user_not_logged, only: [:new, :create, :update, :edit, :destroy]
+  before_action :user_not_logged, only: [:index, :new, :create, :update, :edit, :destroy]
   before_action :not_admin, only: [:new, :create, :update, :edit, :destroy]
  
 
@@ -38,7 +38,7 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Projeto criado com sucesso' }
+        format.html { redirect_to @project, notice: 'Projeto criado com sucesso ' }
         format.json { render :show, status: :created, location: @project }
       else
         format.html { render :new }
