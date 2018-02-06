@@ -250,3 +250,25 @@ table td a:hover{
 #show-btn:hover, #edit-btn:hover, #destroy-btn:hover{
 	border: 1px solid #fafafa;
 }
+
+/* botoes edit actions */
+
+.edit-actions{
+        margin: 15px 0;
+}
+
+.edit-actions #edit-actions-btn{
+        background: #5D94CA;
+        color: #fafafa;
+        margin-top: 20px;
+        border: 2px solid #5d94ca;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: 'Quicksand_Bold';
+        font-size: 1.8em;
+}
+
+.edit-actions #edit-actions-btn:hover{
+        border: 2px solid #fafafa;
+}
+

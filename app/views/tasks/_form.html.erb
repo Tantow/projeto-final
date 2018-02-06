@@ -25,9 +25,9 @@
     <%= form.check_box :done, id: :task_done %>
   </div>
 
-  <div class="register-actions">
-    <%= form.submit "Adicionar tarefa", id:"register-btn" %>
-		<%= link_to 'Cancelar', tasks_path, id:"cancel-btn" %>
+  <div class="edit-actions">
+    <%= form.submit "Adicionar tarefa", id:"edit-actions-btn" %>
+    <%= link_to 'Cancelar', tasks_path, id:"cancel-btn" %>
   </div>
 <% end %>
 </div>
