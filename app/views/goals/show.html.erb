@@ -1,29 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @goal.description %>
-</p>
+<body class="body-light">
+	<div class="body-light-container">
 
-<p>
-  <strong>Start:</strong>
-  <%= @goal.start %>
-</p>
 
-<p>
-  <strong>Deadline:</strong>
-  <%= @goal.deadline %>
-</p>
+		<div class="title title-dark">
+			<div class="title-container">
+				<h1>
+ 					<%= @goal.title %>
+				</h1>
+			</div>
+		</div>
 
-<p>
-  <strong>Status:</strong>
-  <%= @goal.status %>
-</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @goal.title %>
-</p>
+		<div class="projects info">
+			<p>
+			  <strong>Descrição:</strong>
+			  <%= @goal.description %>
+			</p>
 
-<%= link_to 'Edit', edit_goal_path(@goal) %> |
-<%= link_to 'Back', goals_path %>
+			<p>
+			  <strong>Início:</strong>
+			  <%= @goal.start %>
+			</p>
+
+			<p>
+			  <strong>Fim:</strong>
+			  <%= @goal.deadline %>
+			</p>
+
+			<p>
+			  <strong>Status:</strong>
+			  <%= @goal.status %>
+			</p>
+
+			<div class="info-actions">
+				<%= link_to 'Editar', edit_goal_path(@goal), id:"info-btn" %>
+				<%= link_to 'Voltar', goals_path, id:"info-btn" %>
+			</div>
+	
+		</div>
+
+	</div>
+</body>
