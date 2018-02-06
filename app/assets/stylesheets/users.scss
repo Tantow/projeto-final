@@ -13,6 +13,13 @@
 	display: block;
 }
 
+.profile-img p{
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 .profile-img img{
 	position: relative;
 	left: 50%;
