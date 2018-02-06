@@ -28,22 +28,9 @@
 		      <tr>
 		        <td><%= task.title %></td>
 		        <td><%= check_box :confirmation, false, id: :user_front %></td>
-            		<% if current_user.admin == true %>
-              		<td><%= check_box :done, false, id: :user_front %></td>
-            		<% end %> 
-                  <% if task.confirmation == false %>
-                    <td>A fazer</td>
-                  <% else %>
-                    <td> Validando </td>
-                  <% end %>
-                  <% if current_user.admin == true %>
-                    <% if task.confirmation == true && task.done == false %>
-                      <td>A validar</td>
-                    <% else %>
-                      <td>Concluída</td>
-                    <% end %>
+            		
                         
-                   <% end %>  
+                   
 
 		        <td class="table-btn">
 							<%= link_to 'Ver', task, id:"show-btn" %>
