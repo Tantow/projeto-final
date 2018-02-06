@@ -7,7 +7,7 @@
     </head>
       <body>
 	<div class="casulo">
-	<% if !current_page?(login_path) && !current_page?(new_user_path) && !current_page?(reset_password_path)%>
+	<% if logged_in? %>
 		<%= render "layouts/header"%>
 	
 	<% end %>
@@ -18,7 +18,7 @@
 	
 	</div>
 	
-	<% if !current_page?(login_path) && !current_page?(new_user_path) && !current_page?(reset_password_path)%>
+	<% if logged_in? %>
 		<%= render "layouts/footer" %>
 	<% end %>
     
