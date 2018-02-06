@@ -1,4 +1,5 @@
-<%= form_with(model: task, local: true) do |form| %>
+<section class="edit-container">
+<%= form_with(model: task, local: true, html:{class: "register-container"}) do |form| %>
   <% if task.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
@@ -12,13 +13,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.label "Título" %>
-    <%= form.text_field :title, id: :task_title %>
+    <%= form.text_field :title, :placeholder => "Título", id: :task_title %>
   </div>
 
   <div class="field">
-    <%= form.label "Conteúdo" %>
-    <%= form.text_field :content, id: :task_content %>
+    <%= form.text_field :content, :placeholder => "Conteúdo", id: :task_content %>
   </div>
 
   <div class="field">
@@ -26,7 +25,9 @@
     <%= form.check_box :done, id: :task_done %>
   </div>
 
-  <div class="actions">
-    <%= form.submit "Adicionar tarefa" %>
+  <div class="register-actions">
+    <%= form.submit "Adicionar tarefa", id:"register-btn" %>
+		<%= link_to 'Cancelar', tasks_path, id:"cancel-btn" %>
   </div>
 <% end %>
+</div>

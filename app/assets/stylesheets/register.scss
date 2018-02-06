@@ -11,7 +11,7 @@
 	color: #ededed;
 }
 
-.register-container input, label{
+.register-container input, .register-container label{
 	background: #ededed;
 	font-family: 'Quicksand';
 	font-size: 1.4em;
@@ -58,16 +58,16 @@
 }
 
 /* escolha sua foto */
-.register-container label{
+.register-container .user_avatar{
 	cursor: pointer;
 }
 
-.register-container label i{
+.register-container .user_avatar i{
 	color: #053260;
 	padding: 0 10px;
 }
 
-.register-container label:hover{
+.register-container .user_avatar:hover{
 	color: #5d94ca;
 
 	i{
@@ -85,7 +85,7 @@
 
 .register-actions #register-btn{
 	background: #5D94CA;
-	color: #ededed;
+	color: #fafafa;
 	margin-top: 20px;
 	border: 2px solid #5d94ca;
 	border-radius: 10px;
@@ -95,8 +95,9 @@
 }
 
 .register-actions #register-btn:hover{
-	border: 2px solid #ededed;
+	border: 2px solid #fafafa;
 }
+/* esses botoes tb sao usados em paginas de edicao */
 
 .register-section p{
 	text-align: center;

@@ -1,6 +1,6 @@
 <body class="body-light">
-	<div class="body-light-container">
-    <section class="edit-user-container">
+  <div class="body-light-container">
+    <section class="edit-container">
 
     <div class="title title-dark">
       <div class="title-container">
@@ -42,7 +42,7 @@
 	</table>
      </div> 
 
-	 <label for="user_avatar"><i class="fa fa-upload"></i> Altere sua foto</label>
+	 <label for="user_avatar" class="user_avatar"><i class="fa fa-upload"></i> Altere sua foto</label>
          <%= form.file_field :avatar, id: :user_avatar %>
 
       <% if current_user.admin == true %>
@@ -63,4 +63,4 @@
    </section>    
     
   </div>
-</div>
+</body>
