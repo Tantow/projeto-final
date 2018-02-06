@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :goals
+
   #Rotas para as páginas da presidências
 
 
@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :tasks
   resources :projects
   resources :directions
+  resources :goals
 
   #root to: "users#index"
 
@@ -51,6 +52,9 @@ Rails.application.routes.draw do
     patch '/linkteamproject/:id', to: 'projects#rota', as: :add_team_to_project
     patch '/linkuserteam/:id', to: 'teams#rota', as: :add_user_to_team
     patch '/linkuserdirection', to: 'directions#rota', as: :add_user_to_direction
+
+    patch '/linkuserdirection2', to: 'directions#teste', as: :teste
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # #rota para o "feed" de diretorias

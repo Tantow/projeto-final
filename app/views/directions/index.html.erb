@@ -1,9 +1,10 @@
 <body class="body-light">
 	<div class="body-light-container">
-
-		<script>
-			swal("<%= notice %>","","error");
-		</script>
+		<% if (notice) %>
+			<script>
+				swal("<%= notice %>","","error");
+			</script>
+		<% end %>
 
 		<div class="title title-dark">
 			<div class="title-container">
