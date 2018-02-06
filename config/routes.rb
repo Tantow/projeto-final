@@ -54,7 +54,10 @@ Rails.application.routes.draw do
     patch '/linkuserdirection', to: 'directions#rota', as: :add_user_to_direction
 
     patch '/linkuserdirection2', to: 'directions#teste', as: :teste
-
+    patch '/linkpedro', to: 'directios#pedro', as: :pedro
+    patch '/linkjeniffer', to: 'directios#jeniffer', as: :jeniffer
+    patch '/linkbia', to: 'directios#bia', as: :bia
+    patch '/linkmari', to: 'directios#mari', as: :mari
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # #rota para o "feed" de diretorias

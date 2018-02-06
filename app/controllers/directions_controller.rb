@@ -59,6 +59,41 @@ class DirectionsController < ApplicationController
      redirect_to financeiro_path
    end
 
+   def jeniffer
+     r = User.find(params[:user_id])
+     r.admin = false if params[:user][:director] == "0"
+     r.admin = true if params[:user][:director] == "1" #na checkbox 0 = false 1 = verdadeiro
+     r.save
+
+     redirect_to gp_path
+   end
+
+   def pedro
+     e = User.find(params[:user_id])
+     e.admin = false if params[:user][:director] == "0"
+     e.admin = true if params[:user][:director] == "1" #na checkbox 0 = false 1 = verdadeiro
+     e.save
+
+     redirect_to projetos_path
+   end
+
+   def bia
+     w = User.find(params[:user_id])
+     w.admin = false if params[:user][:director] == "0"
+     w.admin = true if params[:user][:director] == "1" #na checkbox 0 = false 1 = verdadeiro
+     w.save
+
+     redirect_to presidencia_path
+   end
+
+   def mari
+     i = User.find(params[:user_id])
+     i.admin = false if params[:user][:director] == "0"
+     i.admin = true if params[:user][:director] == "1" #na checkbox 0 = false 1 = verdadeiro
+     i.save
+
+     redirect_to marketing_path
+   end
 
    def routes66
      y = UserTeam.find_by(user_id: params[:tiago], team_id: params[:id])
