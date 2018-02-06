@@ -11,6 +11,12 @@ class DirectionsController < ApplicationController
     @directions = Direction.all
   end
 
+  def update
+    
+  end
+
+
+
   def show
 
   end
