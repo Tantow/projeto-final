@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.where(ativo: false)
+    @users = User.where(ativo: true)
   end
 
   # GET /users/1

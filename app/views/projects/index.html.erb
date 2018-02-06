@@ -31,7 +31,7 @@
 					<tr>
 						<td><%= project.name %></td>
 						<td><%= project.deadline %></td>
-						<td><%= project.pmo %></td>
+						<td><%= User.find_by(id: project.pmo).full_name %></td>
 						<td><%= project.manager %></td>
 						<td><blockquote class="trello-board-compact">
 						<a id="show-btn" href=<%= project.trello %>>Trello</a>
